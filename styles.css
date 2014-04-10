@@ -67,19 +67,23 @@ body div {
 	left: 0px;
 }
 
+.content img {
+	width: 100%;
+}
+
 .content div {
 	height: 100px;
 }
 
-.cover-photo, .contact-section {
+.contact-section {
 	background: #6FCACD;
 }
 
 .about-section {
-	background: #6FCACD;
+	background: #7AEAEE;
 }
 
 .art-section {
-	background: #6FCACD;
+	background: #7AEAEE;
 }
 
