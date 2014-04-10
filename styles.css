@@ -1,0 +1,59 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#welcome:before, #welcome:after {
+	display: table;
+	content: "";
+}
+
+#welcome {
+	width: 100%;
+	position: absolute;
+	top: 30px;
+	left: 0px;
+}
+
+
+#content	{
+	width: 100%;
+	background: rgb(102, 198, 202);
+}
+
+.text {
+	margin: 0px auto;
+	padding: 20px;
+	color: white;
+}
+
+img {
+	margin-right: 7px;
+}
+
+.paragraph {
+	width: 350px;
+	text-align: justify;
+}
+
+.links {
+	color: black;
+	width: 500px;
+	text-align: center;
+	padding: 0px 0px 20px 0px;
+}
+
+.logo {
+	padding: 0px;
+	width: 300px;
+	color: black;
+	font-family: 'Miniver', cursive;
+	font-size: 85px
+}
+
+#content:before, #content:after; {
+	display: table;
+	content: "";
+}
