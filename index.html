@@ -5,6 +5,12 @@
     <link href="styles.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script src="vex-2.0.1/js/vex.js"></script>
+    <script src="vex-2.0.1/js/vex.dialog.js"></script>
+	<link rel="stylesheet" href="vex-2.0.1/css/vex.css" />
+	<link rel="stylesheet" href="vex-2.0.1/css/vex-theme-flat-attack.css" />
+	<script>vex.defaultOptions.className = 'vex-theme-flat-attack';</script>
 </head>
 
 <body>
@@ -44,27 +50,13 @@
 					<div class="art-thumbnails">
 						<div class="art-thumbnail-row">
 							<div class="art-thumbnail-container">
-								<img class="art-thumbnail" src="art/cokebottle_thumb.png" />
+								<img class="art-thumbnail" src="art/cokebottle_thumb.png" pic-src="art/cokebottle.png" />
 								<div class="art-thumbnail-overlay">
 									HIIII
 								</div>
 							</div>
 							<div class="art-thumbnail-container">
-								<img class="art-thumbnail" src="art/car_thumb.png" />
-								<div class="art-thumbnail-overlay">
-									HIIII
-								</div>
-							</div>
-						</div>
-						<div class="art-thumbnail-row">
-							<div class="art-thumbnail-container">
-								<img class="art-thumbnail" src="art/hatguy_thumb.png" />
-								<div class="art-thumbnail-overlay">
-									HIIII
-								</div>
-							</div>
-							<div class="art-thumbnail-container">
-								<img class="art-thumbnail" src="art/guysitting_thumb.png" />
+								<img class="art-thumbnail" src="art/car_thumb.png" pic-src="art/car.png" />
 								<div class="art-thumbnail-overlay">
 									HIIII
 								</div>
@@ -72,13 +64,27 @@
 						</div>
 						<div class="art-thumbnail-row">
 							<div class="art-thumbnail-container">
-								<img class="art-thumbnail" src="art/hopkins_thumb.png" />
+								<img class="art-thumbnail" src="art/hatguy_thumb.png" pic-src="art/hatguy.png" />
 								<div class="art-thumbnail-overlay">
 									HIIII
 								</div>
 							</div>
 							<div class="art-thumbnail-container">
-								<img class="art-thumbnail" src="art/logo_thumb.png" />
+								<img class="art-thumbnail" src="art/guysitting_thumb.png" pic-src="art/guysitting.png" />
+								<div class="art-thumbnail-overlay">
+									HIIII
+								</div>
+							</div>
+						</div>
+						<div class="art-thumbnail-row">
+							<div class="art-thumbnail-container">
+								<img class="art-thumbnail" src="art/hopkins_thumb.png" pic-src="art/hopkins.png" />
+								<div class="art-thumbnail-overlay">
+									HIIII
+								</div>
+							</div>
+							<div class="art-thumbnail-container">
+								<img class="art-thumbnail" src="art/logo_thumb.png" pic-src="art/logo.png" />
 								<div class="art-thumbnail-overlay">
 									HIIII
 								</div>
@@ -102,5 +108,19 @@
 		</div>
 	</div>
 </body>
+
+<script type="text/javascript">
+	$('.art-thumbnail-overlay').click(function (e) {
+		var target = $(e.target);
+		var thumbnail = target.parent().find('img.art-thumbnail');
+		var overlayText = target.text();
+		vex.dialog.open({
+			showCloseButton: true,
+			message: overlayText,
+			input: '<img src="' + thumbnail.attr('pic-src') + '"/>',
+			buttons: []
+		});
+	});
+</script>
 
 </html>
