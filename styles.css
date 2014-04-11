@@ -6,10 +6,6 @@ body {
     margin: 0px;
 }
 
-body div {
-	background: #2E2E2E;
-}
-
 .wrapper {
 	position: relative;
 }
@@ -59,31 +55,50 @@ body div {
      
 }
 
-.content {
-	position: absolute;
-    z-index: 1;
-    top: 120px;
-	right: 0px;
-	left: 0px;
-}
-
-.content img {
+.cover-photo {
 	width: 100%;
+	margin-bottom: -5px;
 }
 
-.content div {
-	height: 100px;
+.section, .nav-bar {
+	background: #2E2E2E;
 }
 
-.contact-section {
-	background: #6FCACD;
+.content {
+	color: white;
+}
+
+.section {
+	height: 300px;
+}
+
+.section * {
+	margin: 0px;
+}
+
+.section-content {
+	margin: 0px auto;
+	width: 550px;
+}
+
+.section-content h2 {
+	text-transform: uppercase;
+	padding-bottom: 5px;
+}
+
+.section-content * {
+	padding: 20px 0px;
 }
 
 .about-section {
-	background: #7AEAEE;
+	background: #86C42A;
 }
 
 .art-section {
-	background: #7AEAEE;
+	background: #B03EC5;
+}
+
+.contact-section {
+	background: #4CDDD1;
 }
 
