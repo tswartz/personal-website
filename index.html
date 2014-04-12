@@ -16,12 +16,12 @@
 <body>
 	<div class="wrapper">
 		<div class="nav-bar">
-			<a class="nav-bar-item">About</a>
-			<a class="nav-bar-item">Code</a>
+			<a class="nav-bar-item" section="about">About</a>
+			<a class="nav-bar-item" section="code">Code</a>
 			<h1>Talia</h1>
-			<a class="nav-bar-item">Art</a>
-			<a class="nav-bar-item">Resume</a>
-			<a class="nav-bar-item">Contact</a>
+			<a class="nav-bar-item" section="art">Art</a>
+			<a class="nav-bar-item" section="resume">Resume</a>
+			<a class="nav-bar-item" section="contact">Contact</a>
 		</div>
 		<div class="content">
 			<img class="cover-photo" src="cover2.jpg">
@@ -110,6 +110,22 @@
 </body>
 
 <script type="text/javascript">
+
+	function getYPosition(element) {
+	    var yPosition = 0;
+	  
+	    while(element) {
+	        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+	        element = element.offsetParent;
+	    }
+	    return yPosition;
+	}
+
+	$('.nav-bar-item').click(function (e) {
+		var sectionClass = $(e.target).attr('section') + "-section";
+		var section = document.getElementsByClassName(sectionClass)[0];
+		window.scrollTo(0,getYPosition(section));
+	});
 	$('.art-thumbnail-overlay').click(function (e) {
 		var target = $(e.target);
 		var thumbnail = target.parent().find('img.art-thumbnail');
@@ -120,6 +136,8 @@
 			input: '<img src="' + thumbnail.attr('pic-src') + '"/>',
 			buttons: []
 		});
+		$('.vex-content').css({"width": "650px"});
+		$('.vex-overlay').css({"height":"2000px", "width":"100%"});
 	});
 </script>
 
