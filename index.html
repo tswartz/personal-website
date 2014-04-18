@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+    <link rel="icon" type="image/png" href="icon.png">
     <link href="styles.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -11,13 +12,14 @@
 	<link rel="stylesheet" href="vex-2.0.1/css/vex.css" />
 	<link rel="stylesheet" href="vex-2.0.1/css/vex-theme-flat-attack.css" />
 	<script>vex.defaultOptions.className = 'vex-theme-flat-attack';</script>
+	<title>Talia Swartz</title>
 </head>
 
 <body>
 	<div class="nav-bar">
 		<a class="nav-bar-item" section="about">About</a>
 		<a class="nav-bar-item" section="code">Code</a>
-		<h1>Talia</h1>
+		<h1 class="logo">Talia</h1>
 		<a class="nav-bar-item" section="art">Art</a>
 		<a class="nav-bar-item" section="resume">Resume</a>
 		<a class="nav-bar-item" section="contact">Contact</a>
@@ -31,16 +33,50 @@
 			<div class="section-content">
 				<p>
 					Hey there! My name is Talia Swartz. 
-					I'm a fourth-year Computer Science major at Northeastern University. 
-					As part of my degree program I've completed three software engineering internships. 
-					
+					I'm a fourth-year Computer Science major at Northeastern University in Boston, MA. 
+					I love front-end web development and bunnies. 
+					I also love drawing stuff, primarily people and my shoes.
+					The photo you see above is me hiking in Israel.
+					It's the only cool photo of myself that I have.
 				</p>
 			</div>
 		</div>
 		<div class="about-section section">
 			<div class="section-content">
 				<h2>About</h2>
-				<p>Hey there! Intro paragraph dood! I'm an intro paragraph</p>
+				<p>
+					I was born to a spunky flamenco dancer and her stoic but tender-hearted bull-fighter husband in Barcelona.
+					We lived above a convent and at night my father played guitar for us while my mother danced under the stars.
+					<br/><br/>
+					Pranked you! I was born in Palo Alto, CA.
+					When I was 6 we moved to Baltimore, MD.
+					Yes, <i>The Wire</i> was filmed there. And yes, I have seen <i>The Wire</i>.
+					Have you seen <i>The Wire</i>? If not, you should.
+					<br/><br/>
+					I grew up loving art and thought for a long that I would pursue that in college and as a career. 
+					After I enrolled at Northeastern University, I very suddenly changed my mind
+					and switched my major to Computer Science.
+					I always had an interest in coding and I decided that this was my chance to learn more about it.
+					<br/><br/>
+					<b>BEST.</b> <b>DECISION.</b> <b>EVER.</b>
+					<br/><br/>
+					Northeastern is known for its 5-year "co-op" program in which students complete 2-3 internships
+					in fields related to their majors. 
+					As a Computer Science major I have completed 3 totally awesome software-engineering co-ops.
+					<br/><br/>
+					My first one was at Intuit in sunny San Diego, CA.
+					I worked on Turbo Tax Online on the front-end and I ate lunch outside everyday 
+					laughing at the thought of my peers shivering through the Boston winter.
+					Just kidding, I ate outside with great respect and sympathy for those in colder climates.
+					<br/><br/>
+					My second co-op was at PowerAdvocate in Boston.
+					I was a full-stack developer on several different products.
+					It was awesome to work with all parts of the application, including front-end, back-end, and testing.
+					I also got the opportunity to be part of a Scrum team where I learned a ton about working as part of a team.
+					<br/><br/>
+					I am currently on my third and final co-op at HubSpot as a front-end developer on the 
+					Content Optimization System.
+				</p>
 			</div>
 		</div>
 		<div class="code-section section">
@@ -122,6 +158,10 @@
 
 <script type="text/javascript">
 
+	$(document).ready(function() {
+		$('.cover-photo-text').addClass('show-cover-photo-text')
+	});
+
 	function getYPosition(sectionClass) {
 	    if ($('.' + sectionClass).length == 0) {
 	    	return 0;
@@ -137,10 +177,12 @@
 	    	}
 	    }
 	}
-
 	$('.nav-bar-item').click(function (e) {
 		var sectionClass = $(e.target).attr('section') + "-section";
 		window.scrollTo(0,getYPosition(sectionClass));
+	});
+	$('.logo').click(function (e) {
+		window.scrollTo(0,0);
 	});
 	$('.art-thumbnail-overlay').click(function (e) {
 		var target = $(e.target);

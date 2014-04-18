@@ -22,17 +22,20 @@ body {
 	text-transform: uppercase;
 	margin: 0px 10px;
 	padding: 5px;
+	background: none;
+	-webkit-transition: background 1s, color 1s; /* For Safari 3.1 to 6.0 */
+	transition: background 1s, color 1s;
 }
 
 .nav-bar-item:hover {
-	color: black;
 	background: rgba(255, 255, 255, 0.5);
 	cursor: pointer;
 }
 
-.nav-bar h1{
+.logo{
 	display: inline-block;
 	margin: 0px;
+	cursor: pointer;
 	text-transform: uppercase;
 	width: 3.5em;
 	font-size: 5em;
@@ -75,6 +78,14 @@ body {
 	text-align: center;
 	font-weight: 800;
 	font-size: 28px;
+	opacity: 0;
+	-webkit-transition: opacity 4s; /* For Safari 3.1 to 6.0 */
+	transition: opacity 4s;
+
+}
+
+.show-cover-photo-text {
+	opacity: 1;
 }
 
 .section, .nav-bar {
@@ -108,7 +119,8 @@ body {
 }
 
 .section-content * {
-	padding: 20px 0px;
+	padding-top: 30px;
+	padding-bottom: 50px;
 }
 
 .intro-section p {
@@ -159,9 +171,8 @@ body {
 
 .art-thumbnail-overlay {
 	position: absolute;     
-	top: -23px;
+	top: -13px;
 	left: 1px;   
-	bottom: -3px;     
 	right:0px;
 	border-radius: 4px; 
 	text-align: left;   
