@@ -29,7 +29,12 @@
 		</div>
 		<div class="intro-section section">
 			<div class="section-content">
-				<p>Hey there! Intro paragraph dood! I'm an intro paragraph</p>
+				<p>
+					Hey there! My name is Talia Swartz. 
+					I'm a fourth-year Computer Science major at Northeastern University. 
+					As part of my degree program I've completed three software engineering internships. 
+					
+				</p>
 			</div>
 		</div>
 		<div class="about-section section">
@@ -53,13 +58,15 @@
 						<div class="art-thumbnail-container">
 							<img class="art-thumbnail" src="art/cokebottle_thumb.png" pic-src="art/cokebottle.png" />
 							<div class="art-thumbnail-overlay">
-								HIIII
+								Glass Coke Bottle, <br/>
+								Charcoal
 							</div>
 						</div>
 						<div class="art-thumbnail-container">
 							<img class="art-thumbnail" src="art/car_thumb.png" pic-src="art/car.png" />
 							<div class="art-thumbnail-overlay">
-								HIIII
+								Cool Car, <br/>
+								Adobe Illustrator
 							</div>
 						</div>
 					</div>
@@ -67,13 +74,15 @@
 						<div class="art-thumbnail-container">
 							<img class="art-thumbnail" src="art/hatguy_thumb.png" pic-src="art/hatguy.png" />
 							<div class="art-thumbnail-overlay">
-								HIIII
+								Brooding Hat Guy, <br/>
+								Chalk Pastel
 							</div>
 						</div>
 						<div class="art-thumbnail-container">
 							<img class="art-thumbnail" src="art/guysitting_thumb.png" pic-src="art/guysitting.png" />
 							<div class="art-thumbnail-overlay">
-								HIIII
+								Guy Just Chilling, <br/>
+								Chalk Pastel
 							</div>
 						</div>
 					</div>
@@ -81,13 +90,15 @@
 						<div class="art-thumbnail-container">
 							<img class="art-thumbnail" src="art/hopkins_thumb.png" pic-src="art/hopkins.png" />
 							<div class="art-thumbnail-overlay">
-								HIIII
+								JHU Brochure, <br/>
+								Adobe InDesign
 							</div>
 						</div>
 						<div class="art-thumbnail-container">
 							<img class="art-thumbnail" src="art/logo_thumb.png" pic-src="art/logo.png" />
 							<div class="art-thumbnail-overlay">
-								HIIII
+								Rosenbloom Religious School Logo, <br/>
+								Adobe InDesign
 							</div>
 						</div>
 					</div>
@@ -111,20 +122,25 @@
 
 <script type="text/javascript">
 
-	function getYPosition(element) {
-	    var yPosition = 0;
-	  
-	    while(element) {
-	        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
-	        element = element.offsetParent;
+	function getYPosition(sectionClass) {
+	    if ($('.' + sectionClass).length == 0) {
+	    	return 0;
 	    }
-	    return yPosition;
+	    var yPosition = 0;
+	    var sections = $('.content').children();
+	    for (var i = 0; i < sections.length; i++) {
+	    	var currentSection = $(sections.get(i));
+	    	if (currentSection.hasClass(sectionClass)) {
+	    		return yPosition;
+	    	} else {
+	    		yPosition += currentSection.height()
+	    	}
+	    }
 	}
 
 	$('.nav-bar-item').click(function (e) {
 		var sectionClass = $(e.target).attr('section') + "-section";
-		var section = document.getElementsByClassName(sectionClass)[0];
-		window.scrollTo(0,getYPosition(section));
+		window.scrollTo(0,getYPosition(sectionClass));
 	});
 	$('.art-thumbnail-overlay').click(function (e) {
 		var target = $(e.target);
