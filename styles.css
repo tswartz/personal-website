@@ -22,13 +22,11 @@ body {
 	text-transform: uppercase;
 	margin: 0px 10px;
 	padding: 5px;
-	background: none;
-	-webkit-transition: background 1s, color 1s; /* For Safari 3.1 to 6.0 */
-	transition: background 1s, color 1s;
 }
 
 .nav-bar-item:hover {
-	background: rgba(255, 255, 255, 0.5);
+	border-top: 1px dotted white;
+	border-bottom: 1px dotted white;
 	cursor: pointer;
 }
 
@@ -38,7 +36,7 @@ body {
 	cursor: pointer;
 	text-transform: uppercase;
 	width: 3.5em;
-	font-size: 5em;
+	font-size: 3.8em;
 	color: rgba(255, 255, 255, 0);
     text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
      
@@ -95,7 +93,7 @@ body {
 .content {
 	color: white;
 	position: absolute;
-	top: 122px
+	top: 93px
 }
 
 /* SECTIONS ******************************/
@@ -135,6 +133,17 @@ body {
 
 .contact-section, .art-section, .about-section {
 	background: #4CDDD1;
+}
+
+.file-download * {
+	display: inline-block;
+	vertical-align: middle;
+	cursor: pointer;
+	padding: 0px;
+}
+
+.file-download a {
+	margin-left: -6px;
 }
 
 /* ART THUMBNAILS ******************************/

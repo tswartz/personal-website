@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="vex-2.0.1/css/vex.css" />
 	<link rel="stylesheet" href="vex-2.0.1/css/vex-theme-flat-attack.css" />
 	<script>vex.defaultOptions.className = 'vex-theme-flat-attack';</script>
+	<script type="text/javascript" src="script.js"></script>
 	<title>Talia Swartz</title>
 </head>
 
@@ -37,7 +38,7 @@
 					I love front-end web development and bunnies. 
 					I also love drawing stuff, primarily people and my shoes.
 					The photo you see above is me hiking in Israel.
-					It's the only cool photo of myself that I have.
+					It's the only cool photo of myself in existence.
 				</p>
 			</div>
 		</div>
@@ -107,7 +108,11 @@
 		<div class="art-section section">
 			<div class="section-content">
 				<h2>Art</h2>
-				<p>Hey there! Intro paragraph dood! I'm an intro paragraph</p>
+				<p>
+					I am also pursuing a minor in Art and Design. 
+					I've always loved making art, whether it's in charcoal or on Adobe Illustrator. 
+					A lot of the work shown below was made 
+				</p>
 				<div class="art-thumbnails">
 					<div class="art-thumbnail-row">
 						<div class="art-thumbnail-container">
@@ -162,6 +167,11 @@
 			<div class="section-content">
 				<h2>Resume</h2>
 				<p>Hey there! Intro paragraph dood! I'm an intro paragraph</p>
+				<div class="file-download">
+					<img src="download.png" />
+					<a>Download Resume</a>
+				</div>
+				<form id="resume-download-form" method="get" action="TaliaSwartz_resume.docx"></form>
 			</div>
 		</div>
 		<div class="contact-section section">
@@ -172,46 +182,4 @@
 		</div>
 	</div>
 </body>
-
-<script type="text/javascript">
-
-	$(document).ready(function() {
-		$('.cover-photo-text').addClass('show-cover-photo-text')
-	});
-
-	function getYPosition(sectionClass) {
-	    if ($('.' + sectionClass).length == 0) {
-	    	return 0;
-	    }
-	    var yPosition = 0;
-	    var sections = $('.content').children();
-	    for (var i = 0; i < sections.length; i++) {
-	    	var currentSection = $(sections.get(i));
-	    	if (currentSection.hasClass(sectionClass)) {
-	    		return yPosition;
-	    	} else {
-	    		yPosition += currentSection.height()
-	    	}
-	    }
-	}
-	$('.nav-bar-item').click(function (e) {
-		var sectionClass = $(e.target).attr('section') + "-section";
-		window.scrollTo(0,getYPosition(sectionClass));
-	});
-	$('.logo').click(function (e) {
-		window.scrollTo(0,0);
-	});
-	$('.art-thumbnail-overlay').click(function (e) {
-		var target = $(e.target);
-		var thumbnail = target.parent().find('img.art-thumbnail');
-		var vexImage = '<img src="' + thumbnail.attr('pic-src') + '"/>';
-		var overlayText = '<div>' + target.text() + '</div>';
-		vex.open({
-			showCloseButton: true,
-			content: overlayText + '<div class="vex-content-image-container">' + vexImage + '</div>',
-			buttons: []
-		});
-	});
-</script>
-
 </html>
