@@ -135,6 +135,21 @@ body {
 	background: #4CDDD1;
 }
 
+.resume-section {
+	font-size: 0.8em
+}
+
+.resume-section .header {
+	padding: 0px;
+	text-transform: uppercase;
+	font-weight: 700;
+	border-bottom: 1px dotted white;
+}
+
+.file-download {
+	padding: 0px
+}
+
 .file-download * {
 	display: inline-block;
 	vertical-align: middle;
@@ -144,6 +159,14 @@ body {
 
 .file-download a {
 	margin-left: -6px;
+}
+
+.contact-section img {
+	padding: 0px 0px 0px 10px;
+}
+
+.contact-logo {
+	text-decoration: none;
 }
 
 /* ART THUMBNAILS ******************************/
