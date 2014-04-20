@@ -193,6 +193,18 @@ body {
 
 .file-download a {
 	margin-left: -6px;
+	color: cyan;
+}
+
+.file-download a:before {
+	content: "\2B07";
+	margin-right: 5px;
+	font-size: 2.3em;
+	vertical-align: middle;
+}
+
+.file-download a:hover {
+	color: white;
 }
 
 .contact-section img {

@@ -22,18 +22,8 @@ $(document).ready(function() {
 		});
 	});
 
-	$('.file-download *').click(function (e) {
+	$('.file-download a').click(function (e) {
 		$('#resume-download-form').submit()
-	});
-
-	$('.file-download *').mouseover(function (e) {
-		$('.file-download img').attr('src', 'link-icons/download_hover.png');
-		$('.file-download *').css('color', 'white');
-	});
-
-	$('.file-download *').mouseout(function (e) {
-		$('.file-download img').attr('src', 'link-icons/download.png')
-		$('.file-download *').css('color', 'cyan');
 	});
 
 });
