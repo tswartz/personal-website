@@ -59,6 +59,31 @@ body {
      
 }
 
+@-moz-document url-prefix() {
+	.logo {
+		display: inline-block;
+		margin: 0px;
+		cursor: pointer;
+		text-transform: uppercase;
+		content: '';
+		text-shadow: none;
+		width: 3.4em;
+	    background-image: url('logo-screenshot.png');
+	}
+
+	html>/**/body .cover-photo {
+		margin-bottom: -6px;
+	}
+
+	html>/**/body .art-thumbnail-overlay {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+
+
+
 /* CONTENT BELOW NAV BAR ******************************/
 
 .cover-photo {
