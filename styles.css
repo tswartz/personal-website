@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 19px;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     margin: 0px;
@@ -103,7 +103,7 @@ body {
 	width: 100%;
 	text-align: center;
 	font-weight: 800;
-	font-size: 28px;
+	font-size: 1.3em;
 	opacity: 0;
 	-webkit-transition: opacity 4s; /* For Safari 3.1 to 6.0 */
 	transition: opacity 4s;
@@ -121,7 +121,7 @@ body {
 .content {
 	color: white;
 	position: absolute;
-	top: 93px
+	top: 87px
 }
 
 /* SECTIONS ******************************/
