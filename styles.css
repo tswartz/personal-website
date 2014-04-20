@@ -207,6 +207,10 @@ body {
 	color: white;
 }
 
+#resume-download-form {
+	padding-top: 0px;
+}
+
 .contact-section img {
 	padding: 0px 0px 0px 10px;
 }
