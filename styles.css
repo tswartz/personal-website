@@ -121,6 +121,7 @@ body {
 .content {
 	color: white;
 	position: absolute;
+	width: 100%;
 	top: 87px
 }
 
