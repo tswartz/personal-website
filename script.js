@@ -3,11 +3,11 @@ $(document).ready(function() {
 
 	$('.nav-bar-item').click(function (e) {
 		var sectionClass = $(e.target).attr('section') + "-section";
-		window.scrollTo(0,getYPosition(sectionClass));
+        smoothScrollTo(getYPosition(sectionClass));
 	});
 
 	$('.logo').click(function (e) {
-		window.scrollTo(0,0);
+		smoothScrollTo(0);
 	});
 
 	$('.art-thumbnail-overlay').click(function (e) {
@@ -43,4 +43,10 @@ function getYPosition(sectionClass) {
     		yPosition += currentSection.height()
     	}
     }
+}
+
+function smoothScrollTo(scrollTop) {
+	$('html,body').animate({
+      scrollTop: scro
+    }, 1000);
 }
