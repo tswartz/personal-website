@@ -6,6 +6,11 @@ $(document).ready(function() {
         smoothScrollTo(getYPosition(sectionClass));
 	});
 
+	$('.nav-bar-item').each(function(index, element){
+		var sectionClass = $(element).attr('section') + "-section";
+		scrollSpy(sectionClass, $(element));
+	});
+
 	$('.logo').click(function (e) {
 		smoothScrollTo(0);
 	});
@@ -45,8 +50,20 @@ function getYPosition(sectionClass) {
     }
 }
 
+function scrollSpy(sectionClass, navItem) {
+	console.log(sectionClass, navItem);
+	$('.' + sectionClass).scrollspy({
+	    onEnter: function(element, position) {
+	        navItem.addClass('fixed');
+	    },
+	    onLeave: function(element, position) {
+	        navItem.removeClass('fixed');
+	    }
+	});
+}
+
 function smoothScrollTo(scrollTop) {
 	$('html,body').animate({
-      scrollTop: scro
+      scrollTop: scrollTop
     }, 1000);
 }

@@ -25,8 +25,7 @@ body {
 }
 
 .nav-bar-item:hover {
-	border-top: 1px dotted white;
-	border-bottom: 1px dotted white;
+	color: cyan;
 	cursor: pointer;
 }
 
