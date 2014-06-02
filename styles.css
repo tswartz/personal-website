@@ -29,6 +29,10 @@ body {
 	cursor: pointer;
 }
 
+.selected {
+	color: cyan;
+}
+
 .logo{
 	display: inline-block;
 	margin: 0px;

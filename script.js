@@ -51,13 +51,16 @@ function getYPosition(sectionClass) {
 }
 
 function scrollSpy(sectionClass, navItem) {
-	console.log(sectionClass, navItem);
-	$('.' + sectionClass).scrollspy({
+	var section = $('.' + sectionClass);
+	var position = section.position();
+	section.scrollspy({
+		min: position.top,
+    	max: position.top + $(this).height(),
 	    onEnter: function(element, position) {
-	        navItem.addClass('fixed');
+	        navItem.addClass('selected');
 	    },
 	    onLeave: function(element, position) {
-	        navItem.removeClass('fixed');
+	        navItem.removeClass('selected');
 	    }
 	});
 }
