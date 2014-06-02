@@ -55,7 +55,7 @@ function scrollSpy(sectionClass, navItem) {
 	var position = section.position();
 	section.scrollspy({
 		min: position.top,
-    	max: position.top + $(this).height(),
+    	max: position.top + section.outerHeight(),
 	    onEnter: function(element, position) {
 	        navItem.addClass('selected');
 	    },
