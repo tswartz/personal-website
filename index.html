@@ -20,11 +20,13 @@
 <body>
 	<div class="nav-bar">
 		<h1 class="logo">Talia</h1>
-		<a class="nav-bar-item" section="contact">Contact</a>
-		<a class="nav-bar-item" section="resume">Resume</a>
-		<a class="nav-bar-item" section="art">Art</a>
-		<a class="nav-bar-item" section="code">Code</a>
-		<a class="nav-bar-item" section="about">About</a>
+		<div class="nav-bar-links">
+			<a class="nav-bar-item" section="contact">Contact</a>
+			<a class="nav-bar-item" section="resume">Resume</a>
+			<a class="nav-bar-item" section="art">Art</a>
+			<a class="nav-bar-item" section="code">Code</a>
+			<a class="nav-bar-item" section="about">About</a>
+		</div>
 	</div>
 	<div class="content">
 		<div class="cover-photo-container">
@@ -213,8 +215,12 @@
 					Do you need some coding or graphic design work done? 
 					Or do you just wanna be best friends? 
 					Feel free to connect with me on GitHub, LinkedIn, or directly at tswartz92@gmail.com using the links below!
-					<br/><br/>
 				</p>
+				<div class="file-download large-paragraph">
+						And here's my <a>resume</a> if you're interested.
+				</div>
+				<form id="resume-download-form" method="get" action="TaliaSwartz_resume.docx"></form>
+				<br/><br/>
 				<div class="contact-logo-container">
 					<a class="contact-logo" target="blank" href="https://github.com/tswartz">
 						<img src="link-icons/github.png"/>
