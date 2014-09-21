@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 19px;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     margin: 0px;
@@ -9,36 +9,37 @@ body {
 /* NAVIGATION BAR ******************************/
 
 .nav-bar {
+	text-align: center;
+	box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.3);
 	position: fixed;
     z-index: 10;
     width: 100%;
-    background: white;
 }
 
 .nav-bar-item {
 	display: inline-block;
-	color: gray;
+	color: white;
 	text-transform: uppercase;
-	margin: 3% 5px 0px 5px;
-	float: right;
+	margin: 0px 10px;
+	padding: 5px;
 }
 
 .nav-bar-item:hover {
-	color: black;
+	color: cyan;
 	cursor: pointer;
 }
 
 .selected {
-	color: black;
+	color: cyan;
 }
 
 .logo{
 	display: inline-block;
-	margin: 0px 0px 0px 10px;
+	margin: 0px;
 	cursor: pointer;
 	text-transform: uppercase;
 	width: 3.5em;
-	font-size: 2.8em;
+	font-size: 3.8em;
 	color: rgba(255, 255, 255, 0);
     text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
      
@@ -116,14 +117,15 @@ body {
 	opacity: 1;
 }
 
-.section {
-	background: #F1F1F1;
+.section, .nav-bar {
+	background: #2E2E2E;
 }
 
 .content {
-	color: black;
+	color: white;
 	position: absolute;
 	width: 100%;
+	top: 87px
 }
 
 /* SECTIONS ******************************/
@@ -138,8 +140,7 @@ body {
 
 .section-content {
 	margin: 0px auto;
-	width: 80%;
-	border-bottom: 1px rgb(214, 214, 214) solid;
+	width: 550px;
 }
 
 .section-content h2 {
@@ -148,13 +149,13 @@ body {
 }
 
 .section-content a {
-	color: #f5404d;
+	color: cyan;
 	padding: 0px
 	margin-left: 6px;
 }
 
 .section-content a:hover {
-	color: #cb333e;
+	color: white;
 }
 
 .section-content * {
@@ -165,6 +166,10 @@ body {
 
 .intro-section p {
 	padding: 50px 0px;
+}
+
+.contact-section, .art-section, .about-section {
+	background: #0FACAC;
 }
 
 .resume-section {
@@ -192,7 +197,7 @@ body {
 
 .file-download a {
 	margin-left: -6px;
-	color: #f5404d;
+	color: cyan;
 }
 
 .file-download a:before {
@@ -203,7 +208,7 @@ body {
 }
 
 .file-download a:hover {
-	color: #cb333e;
+	color: white;
 }
 
 #resume-download-form {
