@@ -19,7 +19,7 @@ $(document).ready(function() {
 		var target = $(e.target);
 		var thumbnail = target.parent().find('img.art-thumbnail');
 		var vexImage = '<img src="' + thumbnail.attr('pic-src') + '"/>';
-		var overlayText = '<div>' + target.text() + '</div>';
+		var overlayText = '<div>' + target.text() + ' - ' + thumbnail.attr('art-media') + '</div>';
 		vex.open({
 			showCloseButton: true,
 			content: overlayText + '<div class="vex-content-image-container">' + vexImage + '</div>',
