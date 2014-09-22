@@ -194,33 +194,38 @@ body {
 	padding: 50px 0px;
 }
 
-.resume-section {
-	text-align: left;
-	font-size: 0.8em
-}
-
-.resume-section .header {
-	padding: 0px;
-	text-transform: uppercase;
-	font-weight: 700;
-	border-bottom: 1px dotted black;
-}
-
-
 #resume-download-form {
-	padding-top: 0px;
-}
-
-.file-download {
-	padding-top: 0px;
-}
-
-.contact-section img {
-	padding: 0px 0px 0px 10px;
+	padding: 0px;
 }
 
 .contact-logo {
 	text-decoration: none;
+	margin: 0px 25px;
+}
+
+.contact-logo img {
+	padding: 0px;
+}
+
+#github-logo {
+	content: url("link-icons/github.png");
+}
+#github-logo:hover {
+	content: url("link-icons/github_hover.png");
+}
+
+#linkedin-logo {
+	content: url("link-icons/linkedin.png");
+}
+#linkedin-logo:hover {
+	content: url("link-icons/linkedin_hover.png");
+}
+
+#gmail-logo {
+	content: url("link-icons/gmail.png");
+}
+#gmail-logo:hover {
+	content: url("link-icons/gmail_hover.png");
 }
 
 /* ART THUMBNAILS ******************************/
