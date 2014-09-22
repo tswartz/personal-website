@@ -27,11 +27,14 @@ body {
 
 .nav-bar-item {
 	display: inline-block;
-	color: gray;
+	color: #A5A5A5;
 	text-transform: uppercase;
 	margin-right: 25px;
 	float: right;
 	font-size: 0.9em;
+
+	-webkit-transition: color 0.75s;  /* For Safari 3.1 to 6.0 */
+	transition: color 0.75s;
 }
 
 .nav-bar-item:hover {
