@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	$('.nav-bar-item').each(function(index, element){
 		var sectionClass = $(element).attr('section') + "-section";
-		scrollSpy(sectionClass, $(element));
+		//scrollSpy(sectionClass, $(element));
 	});
 
 	$('.logo').click(function (e) {
@@ -51,6 +51,7 @@ function getYPosition(sectionClass) {
 function scrollSpy(sectionClass, navItem) {
 	var section = $('.' + sectionClass);
 	var position = section.position();
+	console.log(section, position);
 	section.scrollspy({
 		min: position.top,
     	max: position.top + section.outerHeight(),
