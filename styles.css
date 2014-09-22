@@ -109,6 +109,7 @@ body {
 	color: black;
 	position: absolute;
 	width: 100%;
+	top: 74px;
 }
 
 /* SECTIONS ******************************/
@@ -260,7 +261,7 @@ body {
 }
 
 .art-thumbnail-overlay:hover {
-	opacity: 0.5;
+	opacity: 0.6;
 }
 
 .art-thumbnail-overlay:hover p{
