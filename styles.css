@@ -181,34 +181,37 @@ body {
 	padding: 0px;
 }
 
-.contact-logo {
-	text-decoration: none;
+a.contact-logo {
 	margin: 0px 25px;
-}
-
-.contact-logo img {
 	padding: 0px;
-}
-
-#github-logo {
-	content: url("link-icons/github.png");
-}
-#github-logo:hover {
-	content: url("link-icons/github_hover.png");
+	font-size: 50px !important;
+	color: #C0C0C0;
 }
 
 #linkedin-logo {
-	content: url("link-icons/linkedin.png");
-}
-#linkedin-logo:hover {
-	content: url("link-icons/linkedin_hover.png");
+	background: #C0C0C0;
+	padding: 1px 5px;
+	border-radius: 4px;
+	color: #F3F3F3;
+	font-size: 44px !important;
+	bottom: 4px;
+	position: relative;
 }
 
-#gmail-logo {
-	content: url("link-icons/gmail.png");
+#linkedin-logo:hover {
+	background: #007bb6;
 }
-#gmail-logo:hover {
-	content: url("link-icons/gmail_hover.png");
+
+#github-logo {
+	font-size: 57px !important;
+}
+
+#github-logo:hover {
+	color: #353535;
+}
+
+#email-logo {
+	font-size: 55px !important;
 }
 
 /* ART THUMBNAILS ******************************/
