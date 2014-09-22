@@ -15,6 +15,9 @@ $(document).ready(function() {
 
 	$('.art-thumbnail-overlay').click(function (e) {
 		var target = $(e.target);
+		if (target.prop("tagName").toLowerCase() == 'p') {
+			target = target.parent();
+		}
 		var thumbnail = target.parent().find('img.art-thumbnail');
 		var vexImage = '<img src="' + thumbnail.attr('pic-src') + '"/>';
 		var overlayText = '<div>' + target.text() + ' - ' + thumbnail.attr('art-media') + '</div>';
