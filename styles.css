@@ -265,6 +265,7 @@ body {
 	opacity: 0;
 	-webkit-transition: opacity 1s;  /* For Safari 3.1 to 6.0 */
 	transition: opacity 1s;
+	cursor: pointer;
 
 	background: -webkit-linear-gradient(white, cyan); /* For Safari 5.1 to 6.0 */
   	background: -o-linear-gradient(white, cyan); /* For Opera 11.1 to 12.0 */
