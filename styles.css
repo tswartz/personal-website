@@ -261,17 +261,19 @@ a.contact-logo {
 
 .art-thumbnail-overlay p {
 	text-align: center;
-	padding: 45% 0px 0px 0px;
+	padding: 80% 0px 0px 0px;
 	-webkit-transition: padding 1s;  /* For Safari 3.1 to 6.0 */
 	transition: padding 1s;
+	color: black;
 }
 
 .art-thumbnail-overlay:hover {
-	opacity: 0.6;
+	opacity: 0.65;
 }
 
 .art-thumbnail-overlay:hover p{
-	padding: 25% 0px 0px 0px;
+	padding: 49% 0px 0px 0px;
+	opacity: 1 !important;
 }
 
 /* VEX ******************************/
