@@ -275,11 +275,21 @@ a.contact-logo {
 
 .vex-content-image-container {
 	max-width: 600px; 
-	margin-top: 35px; 
+	margin-top: 25px; 
 	text-align: center;
 }
 
 .vex-content-image-container img {
 	max-width:100%
+}
+
+.vex-content-image-container .zoomed-img {
+	opacity: 0;
+	-webkit-transition: opacity 0.75s;  /* For Safari 3.1 to 6.0 */
+	transition: opacity 0.75s;
+}
+
+.vex-content-image-container .zoomed-img:hover {
+	opacity: 1;
 }
 

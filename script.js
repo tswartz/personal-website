@@ -26,18 +26,17 @@ $(document).ready(function() {
 			content: overlayText + '<div class="vex-content-image-container">' + vexImage + '</div>',
 			buttons: [],
 			afterOpen: function () {
-				function getWidthAndHeight() {
+				var myImage = new Image();
+				myImage.src = thumbnail.attr('pic-src');
+
+				myImage.onload = function getWidthAndHeight() {
 				   	setArtZoom(thumbnail, this.width, this.height);
 				    return true;
-				}
-				function loadFailure() {
+				};
+				myImage.onerror = function loadFailure() {
 				    console.log("Image failed to load.");
 				    return true;
-				}
-				var myImage = new Image();
-				myImage.onload = getWidthAndHeight;
-				myImage.onerror = loadFailure;
-				myImage.src = thumbnail.attr('pic-src');
+				};
 			}
 		});
 	});
@@ -80,6 +79,8 @@ function setArtZoom(thumbnail, width, height) {
 			zoomedImg.remove();
 		});
 	});
+
+	
 }
 
 // gets the y position of a section
