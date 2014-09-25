@@ -24,21 +24,7 @@ $(document).ready(function() {
 		vex.open({
 			showCloseButton: true,
 			content: overlayText + '<div class="vex-content-image-container">' + vexImage + '</div>',
-			buttons: [],
-			afterOpen: function () {
-				function getWidthAndHeight() {
-				   	setArtZoom(thumbnail, this.width, this.height);
-				    return true;
-				}
-				function loadFailure() {
-				    console.log("Image failed to load.");
-				    return true;
-				}
-				var myImage = new Image();
-				myImage.onload = getWidthAndHeight;
-				myImage.onerror = loadFailure;
-				myImage.src = thumbnail.attr('pic-src');
-			}
+			buttons: []
 		});
 	});
 
@@ -47,40 +33,6 @@ $(document).ready(function() {
 	});
 
 });
-
-function setArtZoom(thumbnail, width, height) {
-	var img = $(".vex-content-image-container img");
-	var imgWidth = img.width();
-	var imgHeight = img.height();
-	var widthRatio = width/imgWidth;
-	var heightRatio = height/imgHeight;
-	img.mouseenter(function (e) {
-		var x = (e.offsetX * widthRatio) - imgWidth;
-		var y = (e.offsetY * heightRatio) - imgHeight;
-		var background = 'url("' + thumbnail.attr('pic-src') + '")';
-		var zoomedImg = $('<img class="zoomed-img"/>');					
-		zoomedImg.css({
-			'position': 'absolute',
-			'max-width': '100%',
-			'background': "" + background,
-			'background-position-x': '-' + x +'px',
-			'background-position-y': '-' + y +'px',
-			'width': imgWidth + '',
-			'height': imgHeight + '',
-			'cursor': 'all-scroll'
-		});
-		$('.vex-content-image-container').prepend(zoomedImg);
-		zoomedImg.mousemove(function (e) {
-			var x = (e.offsetX * widthRatio) - imgWidth;
-			var y = (e.offsetY * heightRatio) - imgHeight;
-			zoomedImg.css('background-position-x', "-" + x + "px");
-			zoomedImg.css('background-position-y', "-" + y + "px");
-		});
-		zoomedImg.mouseleave(function (e) {
-			zoomedImg.remove();
-		});
-	});
-}
 
 // gets the y position of a section
 function getYPosition(sectionClass) {
