@@ -55,14 +55,16 @@ function setArtZoom(thumbnail, width, height) {
 	var widthRatio = width/imgWidth;
 	var heightRatio = height/imgHeight;
 	img.mouseenter(function (e) {
-		var x = e.offsetX;
-		var y = e.offsetY;
-		var background = 'url("' + thumbnail.attr('pic-src') + '") -' + x + 'px -' + y + 'px';
+		var x = (e.offsetX * widthRatio) - imgWidth;
+		var y = (e.offsetY * heightRatio) - imgHeight;
+		var background = 'url("' + thumbnail.attr('pic-src') + '")';
 		var zoomedImg = $('<img class="zoomed-img"/>');					
 		zoomedImg.css({
 			'position': 'absolute',
 			'max-width': '100%',
 			'background': "" + background,
+			'background-position-x': '-' + x +'px',
+			'background-position-y': '-' + y +'px',
 			'width': imgWidth + '',
 			'height': imgHeight + '',
 			'cursor': 'all-scroll'
