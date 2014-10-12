@@ -41,10 +41,6 @@ $(document).ready(function() {
 		});
 	});
 
-	$('.file-download a').click(function (e) {
-		$('#resume-download-form').submit()
-	});
-
 });
 
 function setArtZoom(thumbnail, width, height) {
