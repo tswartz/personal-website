@@ -21,11 +21,18 @@ $(document).ready(function() {
 		var thumbnail = target.parent().find('img.art-thumbnail');
 		var vexImage = '<img src="' + thumbnail.attr('pic-src') + '"/>';
 		var overlayText = '<div>' + target.text() + ' - ' + thumbnail.attr('art-media') + '</div>';
+		if (thumbnail.hasClass('zoomable')) {
+			overlayText +=  '<div class="zoomable-text">Hover over image to zoom</div>';
+		}
 		vex.open({
 			showCloseButton: true,
 			content: overlayText + '<div class="vex-content-image-container">' + vexImage + '</div>',
 			buttons: [],
 			afterOpen: function () {
+				if (!thumbnail.hasClass('zoomable')) {
+					return;
+				}
+
 				var myImage = new Image();
 				myImage.src = thumbnail.attr('pic-src');
 
