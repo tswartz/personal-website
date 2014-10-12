@@ -200,6 +200,10 @@ a.contact-logo {
 	color: #353535;
 }
 
+#twitter-logo:hover {
+	color: #55acee;
+}
+
 /* ART THUMBNAILS ******************************/
 
 .art-thumbnails {
