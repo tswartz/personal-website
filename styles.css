@@ -177,7 +177,7 @@ body {
 }
 
 .section-content .large-paragraph {
-	font-size: 1.7em;
+	font-size: 2em;
 	text-align: center;
 	padding-bottom: 30px;
 }
@@ -200,8 +200,8 @@ body {
 	padding: 50px 0px;
 }
 
-#resume-download-form {
-	padding: 0px;
+.email-link {
+	font-weight: bold;
 }
 
 a.contact-logo {
@@ -308,5 +308,15 @@ a.contact-logo {
 
 .vex-content-image-container img {
 	max-width:100%
+}
+
+.vex-content-image-container .zoomed-img {
+	opacity: 0;
+	-webkit-transition: opacity 0.75s;  /* For Safari 3.1 to 6.0 */
+	transition: opacity 0.75s;
+}
+
+.vex-content-image-container .zoomed-img:hover {
+	opacity: 1;
 }
 
