@@ -93,6 +93,29 @@ body {
 
 /* CONTENT BELOW NAV BAR ******************************/
 
+.top-banner {
+	background: rgb(93, 174, 184);
+	color: white;
+	padding: 30px;
+	text-align: center;
+}
+
+.top-banner-icon-container {
+	padding: 30px;
+	margin: 0px;
+	text-align: center;
+	display: inline-block;
+}
+
+.top-banner-icon-container i {
+	font-size: 70px
+}
+
+.top-banner-icon-container h2 {
+	margin: 0px;
+	font-size: 25px;
+}
+
 .cover-photo {
 	width: 100%;
 	margin-bottom: -5px;
@@ -127,7 +150,7 @@ body {
 	border-bottom: 1px rgb(214, 214, 214) solid;
 }
 
-.section-content h2 {
+.section-content h3 {
 	text-transform: uppercase;
 	padding-top: 60px;
 	padding-bottom: 5px;
@@ -273,13 +296,13 @@ a.contact-logo {
 	width: 100%;
 }
 
-.vex-content {
-	width: 700px
+.zoomable-text {
+	font-size: 0.7em;
+	color: #FA3200;
 }
 
 .vex-content-image-container {
-	max-width: 600px; 
-	margin-top: 35px; 
+	margin-top: 25px; 
 	text-align: center;
 }
 
