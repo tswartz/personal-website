@@ -96,15 +96,17 @@ body {
 .top-banner {
 	background: rgb(93, 174, 184);
 	color: white;
-	padding: 30px;
+	padding: 150px 0px;
 	text-align: center;
 }
 
 .top-banner-icon-container {
-	padding: 30px;
+	padding: 20px 30px;
 	margin: 0px;
 	text-align: center;
 	display: inline-block;
+	width: 175px;
+	vertical-align: text-top;
 }
 
 .top-banner-icon-container i {
@@ -112,7 +114,7 @@ body {
 }
 
 .top-banner-icon-container h2 {
-	margin: 0px;
+	margin: 7px 0px;
 	font-size: 25px;
 }
 
