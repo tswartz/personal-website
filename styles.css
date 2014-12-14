@@ -47,7 +47,7 @@ body {
 
 .logo-container {
 	margin: 0px 0px 0px 10px;
-	color: #29AFD1;
+	color: #07B4D3;
 	width: 13em;
 
 	-webkit-transition: color 0.75s;  /* For Safari 3.1 to 6.0 */
@@ -64,7 +64,7 @@ body {
 }
 
 .logo-container:hover {
-	color: #1E7C96;
+	color: #098399;
 }
 
 .logo-icon{
