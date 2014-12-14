@@ -93,29 +93,6 @@ body {
 
 /* CONTENT BELOW NAV BAR ******************************/
 
-.top-banner {
-	background: rgb(93, 174, 184);
-	color: white;
-	padding: 30px;
-	text-align: center;
-}
-
-.top-banner-icon-container {
-	padding: 30px;
-	margin: 0px;
-	text-align: center;
-	display: inline-block;
-}
-
-.top-banner-icon-container i {
-	font-size: 70px
-}
-
-.top-banner-icon-container h2 {
-	margin: 0px;
-	font-size: 25px;
-}
-
 .cover-photo {
 	width: 100%;
 	margin-bottom: -5px;
