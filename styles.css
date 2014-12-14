@@ -96,12 +96,30 @@ body {
 .cover-photo {
 	width: 100%;
 	margin-bottom: -5px;
-	position: relative;
 }
 
 .cover-photo-container { 
    position: relative; 
    width: 100%; /* for IE 6 */
+}
+
+.cover-photo-text {
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	color: white;
+	text-align: center;
+	font-weight: 100;
+}
+
+.darken-filter {
+	z-index: 0;
+	background: black;
+	opacity: 0.5;
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
 .section {
