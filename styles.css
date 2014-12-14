@@ -23,13 +23,14 @@ body {
 	display: table-cell;
 	vertical-align: middle;
 	width: 400px;
+	padding-right: 20px;
 }
 
 .nav-bar-item {
 	display: inline-block;
 	color: #A5A5A5;
 	text-transform: uppercase;
-	margin-right: 25px;
+	margin-right: 10px;
 	float: right;
 	font-size: 0.9em;
 
@@ -37,18 +38,42 @@ body {
 	transition: color 0.75s;
 }
 
+.nav-bar-item:before {
+	color: white;
+	font-size: 0.95em;
+	margin-right: 2px;
+
+	-webkit-transition: color 0.75s;  /* For Safari 3.1 to 6.0 */
+	transition: color 0.75s;
+}
+
+.nav-bar-item.about:before {
+	content: "\f05a";
+}
+
+.nav-bar-item.code:before {
+	content: "\f121";
+}
+
+.nav-bar-item.art:before {
+	content: "\f1fc";
+}
+
+.nav-bar-item.contact:before {
+	content: "\f0e0";
+}
+
 .nav-bar-item:hover {
 	color: black;
 	cursor: pointer;
 }
 
-.selected {
+.nav-bar-item:hover:before {
 	color: black;
 }
 
-.test-1 {
-	width: 53px;
-	text-align: center;
+.selected {
+	color: black;
 }
 
 .logo{
