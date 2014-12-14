@@ -98,7 +98,7 @@ function getYPosition(sectionClass) {
     	if (currentSection.hasClass(sectionClass)) {
     		return yPosition;
     	} else {
-    		yPosition += currentSection.outerHeight();
+    		yPosition += currentSection.height()
     	}
     }
 }
