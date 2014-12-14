@@ -5,11 +5,17 @@ $(document).ready(function() {
 	});
 
 	$('.nav-bar-item').each(function(index, element){
-		var sectionClass = $(element).attr('section') + "-section";
+		var element = $(element);
+		var itemText = element.text();
+		var itemWidth = element.outerWidth();
+		element.css("width", itemWidth);
+		element.hover(function(){navBarItemMouseIn(this)}, 
+			function(){navBarItemMouseOut(this, itemText)});
+		var sectionClass = element.attr('section') + "-section";
 		//scrollSpy(sectionClass, $(element));
 	});
 
-	$('.logo').click(function (e) {
+	$('.logo-container').click(function (e) {
 		smoothScrollTo(0);
 	});
 
@@ -49,6 +55,14 @@ $(document).ready(function() {
 	});
 
 });
+
+function navBarItemMouseIn(element) {
+	$(element).html("&#xf0e0;");
+}
+
+function navBarItemMouseOut(element, navBarItemText) {
+	$(element).html(navBarItemText);
+}
 
 function setArtZoom(thumbnail, width, height) {
 	var img = $(".vex-content-image-container img");
