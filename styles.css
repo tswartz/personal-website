@@ -30,7 +30,8 @@ body {
 	display: inline-block;
 	color: #A5A5A5;
 	text-transform: uppercase;
-	margin-right: 20px;
+	padding: 5px;
+	margin-right: 10px;
 	float: right;
 	font-size: 0.9em;
 	cursor: pointer;

@@ -58,12 +58,16 @@ $(document).ready(function() {
 });
 
 function navBarItemMouseIn(element) {
-	var icon = $(element).attr("icon");
-	$(element).html(icon);
+	var element = $(element);
+	var icon = element.attr("icon");
+	element.addClass("fa");
+	element.html(icon);
 }
 
 function navBarItemMouseOut(element, navBarItemText) {
-	$(element).html(navBarItemText);
+	var element = $(element);
+	element.removeClass("fa");
+	element.html(navBarItemText);
 }
 
 function setArtZoom(thumbnail, width, height) {
