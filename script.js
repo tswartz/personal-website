@@ -7,8 +7,7 @@ $(document).ready(function() {
 	$('.nav-bar-item').each(function(index, element){
 		var element = $(element);
 		var itemText = element.text();
-		var itemWidth = element.outerWidth();
-		element.css("width", itemWidth);
+		element.css("width", element.outerWidth());
 		element.hover(function(){navBarItemMouseIn(this)}, 
 			function(){navBarItemMouseOut(this, itemText)});
 		var sectionClass = element.attr('section') + "-section";
@@ -57,7 +56,8 @@ $(document).ready(function() {
 });
 
 function navBarItemMouseIn(element) {
-	$(element).html("&#xf0e0;");
+	var icon = $(element).attr("icon");
+	$(element).html(icon);
 }
 
 function navBarItemMouseOut(element, navBarItemText) {
