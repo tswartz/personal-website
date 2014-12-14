@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	$('.cover-photo-text').addClass("loaded");
+
 	$('.nav-bar-item').click(function (e) {
 		var sectionClass = $(e.target).attr('section') + "-section";
         smoothScrollTo(getYPosition(sectionClass));
