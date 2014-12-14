@@ -95,10 +95,10 @@ body {
 	font-weight: 100;
 	opacity: 0;
     
-    -moz-transition: opacity 2s;
-    -webkit-transition: opacity 2s;
-    -o-transition: opacity 2s;
-   	transition: opacity 2s;
+    -moz-transition: opacity 2.5s;
+    -webkit-transition: opacity 2.5s;
+    -o-transition: opacity 2.5s;
+   	transition: opacity 2.5s;
 }
 
 .cover-photo-text.loaded {
