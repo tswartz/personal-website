@@ -25,6 +25,8 @@ $(document).ready(function() {
 
 });
 
+// When nav bar item is in hover state, it turns into
+// a certain icon (designated by "icon" attribute)
 function setIconHoverEffect(index, element) {
 	var element = $(element);
 	var itemText = element.text();
@@ -36,6 +38,7 @@ function setIconHoverEffect(index, element) {
 	//scrollSpy(sectionClass, $(element));
 }
 
+// Sets nav bar item text to designated font-awesome icon
 function navBarItemMouseIn(element) {
 	var element = $(element);
 	var icon = element.attr("icon");
@@ -43,12 +46,15 @@ function navBarItemMouseIn(element) {
 	element.html(icon);
 }
 
+// Sets nav bar item back to original text
 function navBarItemMouseOut(element, navBarItemText) {
 	var element = $(element);
 	element.removeClass("fa");
 	element.html(navBarItemText);
 }
 
+// Gets necessary data about art image when thumbnail is clicked 
+// and opens vex popup with full image displayed
 function setArtVexPopup(e) {
 	var target = $(e.target);
 	if (target.prop("tagName").toLowerCase() == 'p') {
@@ -63,6 +69,8 @@ function setArtVexPopup(e) {
 	openVexPopup(thumbnail, vexImage, overlayText);
 }
 
+// Opens vex popup with full image displayed and
+// sets up zoom for zoomable images
 function openVexPopup(thumbnail, vexImage, overlayText) {
 	vex.open({
 		showCloseButton: true,
@@ -88,6 +96,7 @@ function openVexPopup(thumbnail, vexImage, overlayText) {
 	});
 }
 
+// Sets up zooming when hovering over full art image
 function setArtZoom(thumbnail, width, height) {
 	var img = $(".vex-content-image-container img");
 	var imgWidth = img.width();
@@ -141,6 +150,7 @@ function getYPosition(sectionClass) {
     }
 }
 
+// Highlights nav bar item when viewing corresponding section
 function scrollSpy(sectionClass, navItem) {
 	var section = $('.' + sectionClass);
 	var position = section.position();
@@ -157,6 +167,7 @@ function scrollSpy(sectionClass, navItem) {
 	});
 }
 
+// Scrolls to given y-position (scrollTop)
 function smoothScrollTo(scrollTop) {
 	$('html,body').animate({
       scrollTop: scrollTop
