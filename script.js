@@ -1,21 +1,19 @@
 $(document).ready(function() {
+	// add loaded class to cover photo text so it can fade in
 	$('.cover-photo-text').addClass("loaded");
 
+	// set smooth scroll for each item in nav bar
 	$('.nav-bar-item').click(function (e) {
 		var sectionClass = $(e.target).attr('section') + "-section";
         smoothScrollTo(getYPosition(sectionClass));
 	});
 
+	// set icon hover effect for each nav bar item
 	$('.nav-bar-item').each(function(index, element){
-		var element = $(element);
-		var itemText = element.text();
-		element.css("width", element.outerWidth());
-		element.hover(function(){navBarItemMouseIn(this)}, 
-			function(){navBarItemMouseOut(this, itemText)});
-		var sectionClass = element.attr('section') + "-section";
-		//scrollSpy(sectionClass, $(element));
+		setIconHoverEffect(index, element);
 	});
 
+	// if you click on logo, smooth scroll to top
 	$('.logo-container').click(function (e) {
 		smoothScrollTo(0);
 	});
@@ -56,6 +54,17 @@ $(document).ready(function() {
 	});
 
 });
+
+function setIconHoverEffect(index, element) {
+	var element = $(element);
+	var itemText = element.text();
+	element.css("width", element.outerWidth());
+	element.hover(function(){navBarItemMouseIn(this)}, 
+		function(){navBarItemMouseOut(this, itemText)});
+	var sectionClass = element.attr('section') + "-section";
+	// scroll spy not working consistently
+	//scrollSpy(sectionClass, $(element));
+}
 
 function navBarItemMouseIn(element) {
 	var element = $(element);
