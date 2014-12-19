@@ -18,39 +18,9 @@ $(document).ready(function() {
 		smoothScrollTo(0);
 	});
 
+	// set art thumbnail overlay click event- vex popup
 	$('.art-thumbnail-overlay').click(function (e) {
-		var target = $(e.target);
-		if (target.prop("tagName").toLowerCase() == 'p') {
-			target = target.parent();
-		}
-		var thumbnail = target.parent().find('img.art-thumbnail');
-		var vexImage = '<img src="' + thumbnail.attr('pic-src') + '"/>';
-		var overlayText = '<div>' + target.text() + ' - ' + thumbnail.attr('art-media') + '</div>';
-		if (thumbnail.hasClass('zoomable')) {
-			overlayText +=  '<div class="zoomable-text">Hover over image to zoom</div>';
-		}
-		vex.open({
-			showCloseButton: true,
-			content: overlayText + '<div class="vex-content-image-container">' + vexImage + '</div>',
-			buttons: [],
-			afterOpen: function () {
-				if (!thumbnail.hasClass('zoomable')) {
-					return;
-				}
-
-				var myImage = new Image();
-				myImage.src = thumbnail.attr('pic-src');
-
-				myImage.onload = function getWidthAndHeight() {
-				   	setArtZoom(thumbnail, this.width, this.height);
-				    return true;
-				};
-				myImage.onerror = function loadFailure() {
-				    console.log("Image failed to load.");
-				    return true;
-				};
-			}
-		});
+		setArtVexPopup(e);
 	});
 
 });
@@ -77,6 +47,41 @@ function navBarItemMouseOut(element, navBarItemText) {
 	var element = $(element);
 	element.removeClass("fa");
 	element.html(navBarItemText);
+}
+
+function setArtVexPopup(e) {
+	var target = $(e.target);
+	if (target.prop("tagName").toLowerCase() == 'p') {
+		target = target.parent();
+	}
+	var thumbnail = target.parent().find('img.art-thumbnail');
+	var vexImage = '<img src="' + thumbnail.attr('pic-src') + '"/>';
+	var overlayText = '<div>' + target.text() + ' - ' + thumbnail.attr('art-media') + '</div>';
+	if (thumbnail.hasClass('zoomable')) {
+		overlayText +=  '<div class="zoomable-text">Hover over image to zoom</div>';
+	}
+	vex.open({
+		showCloseButton: true,
+		content: overlayText + '<div class="vex-content-image-container">' + vexImage + '</div>',
+		buttons: [],
+		afterOpen: function () {
+			if (!thumbnail.hasClass('zoomable')) {
+				return;
+			}
+
+			var myImage = new Image();
+			myImage.src = thumbnail.attr('pic-src');
+
+			myImage.onload = function getWidthAndHeight() {
+			   	setArtZoom(thumbnail, this.width, this.height);
+			    return true;
+			};
+			myImage.onerror = function loadFailure() {
+			    console.log("Image failed to load.");
+			    return true;
+			};
+		}
+	});
 }
 
 function setArtZoom(thumbnail, width, height) {
