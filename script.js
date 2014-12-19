@@ -18,7 +18,7 @@ $(document).ready(function() {
 		smoothScrollTo(0);
 	});
 
-	// set art thumbnail overlay click event- vex popup
+	// set art thumbnail overlay click event -> vex popup
 	$('.art-thumbnail-overlay').click(function (e) {
 		setArtVexPopup(e);
 	});
@@ -60,6 +60,10 @@ function setArtVexPopup(e) {
 	if (thumbnail.hasClass('zoomable')) {
 		overlayText +=  '<div class="zoomable-text">Hover over image to zoom</div>';
 	}
+	openVexPopup(thumbnail, vexImage, overlayText);
+}
+
+function openVexPopup(thumbnail, vexImage, overlayText) {
 	vex.open({
 		showCloseButton: true,
 		content: overlayText + '<div class="vex-content-image-container">' + vexImage + '</div>',
