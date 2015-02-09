@@ -44,7 +44,6 @@ function navBarItemMouseIn(element) {
 	var icon = element.attr("icon");
 	element.addClass("fa");
 	element.html(icon);
-	console.log(element);
 }
 
 // Sets nav bar item back to original text
@@ -140,7 +139,7 @@ function getYPosition(sectionClass) {
     	return 0;
     }
     var yPosition = 0;
-    var sections = $('.content').children();
+    var sections = $('main').children();
     for (var i = 0; i < sections.length; i++) {
     	var currentSection = $(sections.get(i));
     	if (currentSection.hasClass(sectionClass)) {
@@ -169,7 +168,13 @@ function scrollSpy(sectionClass, navItem) {
 }
 
 // Scrolls to given y-position (scrollTop)
+// If in mobile mode, collapse nav
 function smoothScrollTo(scrollTop) {
+	// if in mobile mode
+	if ($('#navbar').hasClass('in')) {
+		$('button.navbar-toggle').click();
+	}
+	
 	$('html,body').animate({
       scrollTop: scrollTop
     }, 1000);
