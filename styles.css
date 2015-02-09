@@ -218,6 +218,21 @@ a.contact-logo {
 
 /* ART THUMBNAILS ******************************/
 
+.row {
+	padding: 0px;
+}
+
+.row > * {
+	padding: 15px;
+}
+
+.thumbnail {
+	padding: 0px;
+	max-width: 480px;
+	max-height: 480px;
+	margin: 0px auto;
+}
+
 .thumbnail img {
 	padding: 0px;
 }

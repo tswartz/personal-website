@@ -6,6 +6,8 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="art-thumbnail.html">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type='text/javascript' src='jquery.scrollspy.js'></script>
     <script src="vex-2.0.1/js/vex.js"></script>
@@ -21,6 +23,7 @@
 </head>
 
 <body>
+	<art-thumbnail src="car_thumb.jpg" pic-src="car.jpg"></art-thumbnail>
 	<header>
 	  	<nav class="navbar navbar-inverse nav-bar navbar-fixed-top">
 	      	<div class="container">
@@ -109,123 +112,56 @@
 				<p class="large-paragraph">
 					Look at these things I drew! 
 				</p>
-
-				<div class="row">
-					<div class="col-xs-12 col-md-6">
-					    <a href="#" class="thumbnail">
-					      	<img src="art/converse_thumb.jpg" class="zoomable" pic-src="art/converse.jpg" art-media="Adobe Illustrator">
-					    </a>
-				  	</div>
-				  	<div class="col-xs-12 col-md-6">
-					    <a href="#" class="thumbnail">
-					      	<img src="art/peppers_thumb.jpg" class="zoomable" pic-src="art/peppers.jpg" art-media="Charcoal">
-					    </a>
-				  	</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-6">
-					    <a href="#" class="thumbnail">
-					      	<img src="art/cokebottle_thumb.jpg" class="zoomable" pic-src="art/cokebottle.jpg" art-media="Charcoal">
-					    </a>
-				  	</div>
-				  	<div class="col-xs-12 col-md-6">
-					    <a href="#" class="thumbnail">
-					      	<img src="art/hatguy_thumb.jpg" pic-src="art/hatguy.jpg" art-media="Chalk Pastel">
-					    </a>
-				  	</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-6">
-					    <a href="#" class="thumbnail">
-					      	<img src="art/logo_thumb.jpg" pic-src="art/logo.jpg" art-media="Adobe InDesign">
-					    </a>
-				  	</div>
-				  	<div class="col-xs-12 col-md-6">
-					    <a href="#" class="thumbnail">
-					      	<img src="art/potgrater_thumb.jpg" class="zoomable" pic-src="art/potgrater.jpg" art-media="Charcoal">
-					    </a>
-				  	</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-6">
-					    <a href="#" class="thumbnail">
-					      	<img src="art/mugfruit_thumb.jpg" class="zoomable" pic-src="art/mugfruit.jpg" art-media="Charcoal">
-					    </a>
-				  	</div>
-				  	<div class="col-xs-12 col-md-6">
-					    <a href="#" class="thumbnail">
-					      	<img src="art/car_thumb.jpg" class="zoomable" pic-src="art/car.jpg" art-media="Adobe Illustrator">
-					    </a>
-				  	</div>
-				</div>
-
-<!-- 				<div class="art-thumbnails">
-					<div class="art-thumbnail-row">
-						<div class="art-thumbnail-container">
-						    <div class="art-thumbnail-dummy"></div>
-						     <div class="art-thumbnail art-thumbnail-overlay">
-						    	<p>Converse</p>
-						    </div>
-						    <img class="art-thumbnail zoomable" src="art/converse_thumb.jpg" pic-src="art/converse.jpg" art-media="Adobe Illustrator" />
-						</div>
-						<div class="art-thumbnail-container">
-						    <div class="art-thumbnail-dummy"></div>
-						     <div class="art-thumbnail art-thumbnail-overlay">
-						    	<p>Peppers</p>
-						    </div>
-						    <img class="art-thumbnail zoomable" src="art/peppers_thumb.jpg" pic-src="art/peppers.jpg" art-media="Charcoal"/>
-						</div>
+				<div class="thumbnails">
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+						    <a class="thumbnail">
+						      	<img src="art/converse_thumb.jpg" class="zoomable" pic-src="art/converse.jpg" art-media="Adobe Illustrator">
+						    </a>
+					  	</div>
+					  	<div class="col-xs-12 col-md-6">
+						    <a class="thumbnail">
+						      	<img src="art/peppers_thumb.jpg" class="zoomable" pic-src="art/peppers.jpg" art-media="Charcoal">
+						    </a>
+					  	</div>
 					</div>
-					<div class="art-thumbnail-row">
-						<div class="art-thumbnail-container">
-						    <div class="art-thumbnail-dummy"></div>
-						     <div class="art-thumbnail art-thumbnail-overlay">
-						    	<p>Glass Coke Bottle and Sneaker</p>
-						    </div>
-						    <img class="art-thumbnail zoomable" src="art/cokebottle_thumb.jpg" pic-src="art/cokebottle.jpg" art-media="Charcoal"/>
-						</div>
-						<div class="art-thumbnail-container">
-						    <div class="art-thumbnail-dummy"></div>
-						     <div class="art-thumbnail art-thumbnail-overlay">
-						    	<p>Brooding Hat Guy</p>
-						    </div>
-						    <img class="art-thumbnail" src="art/hatguy_thumb.jpg" pic-src="art/hatguy.jpg" art-media="Chalk Pastel"/>
-						</div>
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+						    <a class="thumbnail">
+						      	<img src="art/cokebottle_thumb.jpg" class="zoomable" pic-src="art/cokebottle.jpg" art-media="Charcoal">
+						    </a>
+					  	</div>
+					  	<div class="col-xs-12 col-md-6">
+						    <a class="thumbnail">
+						      	<img src="art/hatguy_thumb.jpg" pic-src="art/hatguy.jpg" art-media="Chalk Pastel">
+						    </a>
+					  	</div>
 					</div>
-					<div class="art-thumbnail-row">
-						<div class="art-thumbnail-container">
-						    <div class="art-thumbnail-dummy"></div>
-						    <div class="art-thumbnail art-thumbnail-overlay">
-						    	<p>Rosenbloom Religious School Logo</p>
-						    </div>
-						    <img class="art-thumbnail" src="art/logo_thumb.jpg" pic-src="art/logo.jpg" art-media="Adobe InDesign"/>
-						</div>
-						<div class="art-thumbnail-container">
-						    <div class="art-thumbnail-dummy"></div>
-						     <div class="art-thumbnail art-thumbnail-overlay">
-						    	<p>Cheese Graters Are Hard To Draw</p>
-						    </div>
-						    <img class="art-thumbnail zoomable" src="art/potgrater_thumb.jpg" pic-src="art/potgrater.jpg" art-media="Charcoal"/>
-						</div>
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+						    <a class="thumbnail">
+						      	<img src="art/logo_thumb.jpg" pic-src="art/logo.jpg" art-media="Adobe InDesign">
+						    </a>
+					  	</div>
+					  	<div class="col-xs-12 col-md-6">
+						    <a class="thumbnail">
+						      	<img src="art/potgrater_thumb.jpg" class="zoomable" pic-src="art/potgrater.jpg" art-media="Charcoal">
+						    </a>
+					  	</div>
 					</div>
-					<div class="art-thumbnail-row">
-						<div class="art-thumbnail-container">
-						    <div class="art-thumbnail-dummy"></div>
-						     <div class="art-thumbnail art-thumbnail-overlay">
-						    	<p>Mug N' Fruit</p>
-						    </div>
-						    <img class="art-thumbnail zoomable" src="art/mugfruit_thumb.jpg" pic-src="art/mugfruit.jpg" art-media="Charcoal"/>
-						</div>
-						<div class="art-thumbnail-container">
-						    <div class="art-thumbnail-dummy"></div>
-						     <div class="art-thumbnail art-thumbnail-overlay">
-						    	<p>Cool Car</p>
-						    </div>
-						    <img class="art-thumbnail zoomable" src="art/car_thumb.jpg" pic-src="art/car.jpg" art-media="Adobe Illustrator"/>
-						</div>
+					<div class="row">
+						<div class="col-xs-12 col-md-6">
+						    <a class="thumbnail">
+						      	<img src="art/mugfruit_thumb.jpg" class="zoomable" pic-src="art/mugfruit.jpg" art-media="Charcoal">
+						    </a>
+					  	</div>
+					  	<div class="col-xs-12 col-md-6">
+						    <a class="thumbnail">
+						      	<img src="art/car_thumb.jpg" class="zoomable" pic-src="art/car.jpg" art-media="Adobe Illustrator">
+						    </a>
+					  	</div>
 					</div>
 				</div>
-			-->
 			</div>
 		</div>
 		<div class="contact-section section">
