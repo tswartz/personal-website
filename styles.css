@@ -226,75 +226,8 @@ a.contact-logo {
 	padding: 15px;
 }
 
-.thumbnail {
-	padding: 0px;
-	max-width: 480px;
-	max-height: 480px;
-	margin: 0px auto;
-}
-
-.thumbnail img {
-	padding: 0px;
-}
-
 .art-thumbnails {
 	padding-top: 0px;
-}
-
-.art-thumbnail-row {
-	padding-bottom: 0px
-}
-
-.art-thumbnail-container {
-    display: inline-block;
-    position: relative;
-    width: 45%;
-    padding: 0px;
-    margin: 0px 2%;
-}
-.art-thumbnail-dummy {
-    margin-top: 100%;
-    padding: 0px;
-}
-.art-thumbnail {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0px;
-    width: 100%;
-	height: 100%;
-}
-
-.art-thumbnail-overlay {
-	z-index: 1;
-	opacity: 0;
-	-webkit-transition: opacity 1s;  /* For Safari 3.1 to 6.0 */
-	transition: opacity 1s;
-	cursor: pointer;
-
-	background: -webkit-linear-gradient(white, cyan); /* For Safari 5.1 to 6.0 */
-  	background: -o-linear-gradient(white, cyan); /* For Opera 11.1 to 12.0 */
-  	background: -moz-linear-gradient(white, cyan); /* For Firefox 3.6 to 15 */
-  	background: linear-gradient(white, cyan); /* Standard syntax */
-}
-
-.art-thumbnail-overlay p {
-	text-align: center;
-	padding: 80% 0px 0px 0px;
-	-webkit-transition: padding 1s;  /* For Safari 3.1 to 6.0 */
-	transition: padding 1s;
-	color: black;
-}
-
-.art-thumbnail-overlay:hover {
-	opacity: 0.65;
-}
-
-.art-thumbnail-overlay:hover p{
-	padding: 49% 0px 0px 0px;
-	opacity: 1 !important;
 }
 
 /* VEX ******************************/
