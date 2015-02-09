@@ -9,63 +9,44 @@ body {
 /* NAVIGATION BAR ******************************/
 
 .nav-bar {
-	position: fixed;
-    z-index: 10;
-    width: 100%;
     background: white;
-    padding: 10px;
-    box-shadow: 0px 1px 2px 1px rgba(0,0,0,0.08);
-    float: left;
-    display: table;
-}
-
-.nav-bar-links {
-	display: table-cell;
-	vertical-align: middle;
-	width: 400px;
-	padding-right: 20px;
+    border: none;
 }
 
 .nav-bar-item {
-	display: inline-block;
-	color: #A5A5A5;
 	text-transform: uppercase;
-	padding: 5px;
-	margin-right: 10px;
-	float: right;
 	font-size: 0.9em;
-	cursor: pointer;
-	text-align: center;
 }
 
-.nav-bar-item:hover {
-	color: black;
+.nav-bar-item > a:hover {
+	color: black !important;
+	text-align: center;
+	cursor: pointer;
 }
 
 .selected {
 	color: black;
 }
 
-.logo-container {
-	margin: 0px 0px 0px 10px;
+.logo * {
+	display: inline;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 2.8em;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
+    font-weight: bold;
+}
+
+.logo {
 	color: #07B4D3;
-	width: 13em;
 
 	-webkit-transition: color 0.75s;  /* For Safari 3.1 to 6.0 */
 	transition: color 0.75s;
 }
 
-.logo-container * {
-	margin: 0px;
-	display: inline-block;
-	cursor: pointer;
-	text-transform: uppercase;
-	font-size: 2.8em;
-    text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
-}
-
-.logo-container:hover {
+.logo:hover {
 	color: #098399;
+	text-decoration: none;
 }
 
 .logo-icon{
@@ -73,6 +54,13 @@ body {
 	font-weight: 100;
 }
 
+.navbar-inverse .navbar-collapse {
+	border: none;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: black;
+}
 
 /* CONTENT BELOW NAV BAR ******************************/
 

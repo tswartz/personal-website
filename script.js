@@ -40,15 +40,16 @@ function setIconHoverEffect(index, element) {
 
 // Sets nav bar item text to designated font-awesome icon
 function navBarItemMouseIn(element) {
-	var element = $(element);
+	var element = $(element).find("a");
 	var icon = element.attr("icon");
 	element.addClass("fa");
 	element.html(icon);
+	console.log(element);
 }
 
 // Sets nav bar item back to original text
 function navBarItemMouseOut(element, navBarItemText) {
-	var element = $(element);
+	var element = $(element).find("a");
 	element.removeClass("fa");
 	element.html(navBarItemText);
 }
