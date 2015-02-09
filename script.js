@@ -14,7 +14,7 @@ $(document).ready(function() {
 	});
 
 	// if you click on logo, smooth scroll to top
-	$('.logo-container').click(function (e) {
+	$('.logo').click(function (e) {
 		smoothScrollTo(0);
 	});
 
@@ -187,8 +187,8 @@ function scrollSpy(sectionClass, navItem) {
 // Scrolls to given y-position (scrollTop)
 // If in mobile mode, collapse nav
 function smoothScrollTo(scrollTop) {
-	// if in mobile mode
-	if (inMobileMode()) {
+	// if in mobile mode and not clicking on logo
+	if (inMobileMode() && scrollTop!=0) {
 		$('button.navbar-toggle').click();
 	}
 
