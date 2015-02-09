@@ -192,6 +192,8 @@ function smoothScrollTo(scrollTop) {
 		$('button.navbar-toggle').click();
 	}
 
+	console.log(scrollTop);
+
 	$('html,body').animate({
       scrollTop: scrollTop
     }, 1000);
