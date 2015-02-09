@@ -45,13 +45,11 @@ function setIconHoverEffect(index, navBarItem) {
 // Sets nav bar item text to designated font-awesome icon
 function navBarItemMouseIn(navBarItem) {
 	if (inMobileMode()) {
-		console.log("in mobile");
 		return;
 	}
 	var navBarItem = $(navBarItem);
 	var link = navBarItem.find("a");
 	var icon = link.attr("icon");
-	console.log("hey");
 	navBarItem.css({
 		"width" : navBarItem.outerWidth(),
 		"text-align" : "center"
@@ -68,9 +66,6 @@ function navBarItemMouseOut(navBarItem, navBarItemText) {
 		"width" : "",
 		"text-align": ""
 	});
-	if (inMobileMode()) {
-		return;
-	}
 	link.removeClass("fa");
 	link.html(navBarItemText);
 }
