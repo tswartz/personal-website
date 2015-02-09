@@ -219,6 +219,10 @@ a.contact-logo {
 
 /* ART THUMBNAILS ******************************/
 
+.thumbnail img {
+	padding: 0px;
+}
+
 .art-thumbnails {
 	padding-top: 0px;
 }
