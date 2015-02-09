@@ -9,8 +9,8 @@ $(document).ready(function() {
 	});
 
 	// set icon hover effect for each nav bar item
-	$('.nav-bar-item').each(function(index, element){
-		setIconHoverEffect(index, element);
+	$('.nav-bar-item').each(function(index, navBarItem){
+		setIconHoverEffect(index, navBarItem);
 	});
 
 	// if you click on logo, smooth scroll to top
@@ -25,32 +25,54 @@ $(document).ready(function() {
 
 });
 
+// Determines if in mobile mode
+function inMobileMode() {
+	return $('#desktopTest').is(':hidden');
+}
+
 // When nav bar item is in hover state, it turns into
 // a certain icon (designated by "icon" attribute)
-function setIconHoverEffect(index, element) {
-	var element = $(element);
-	var itemText = element.text();
-	element.css("width", element.outerWidth());
-	element.hover(function(){navBarItemMouseIn(this)}, 
+function setIconHoverEffect(index, navBarItem) {
+	var navBarItem = $(navBarItem);
+	var itemText = navBarItem.text();
+	navBarItem.hover(function(){navBarItemMouseIn(this)}, 
 		function(){navBarItemMouseOut(this, itemText)});
-	var sectionClass = element.attr('section') + "-section";
+	var sectionClass = navBarItem.attr('section') + "-section";
 	// scroll spy not working consistently
-	//scrollSpy(sectionClass, $(element));
+	//scrollSpy(sectionClass, $(navBarItem));
 }
 
 // Sets nav bar item text to designated font-awesome icon
-function navBarItemMouseIn(element) {
-	var element = $(element).find("a");
-	var icon = element.attr("icon");
-	element.addClass("fa");
-	element.html(icon);
+function navBarItemMouseIn(navBarItem) {
+	if (inMobileMode()) {
+		console.log("in mobile");
+		return;
+	}
+	var navBarItem = $(navBarItem);
+	var link = navBarItem.find("a");
+	var icon = link.attr("icon");
+	console.log("hey");
+	navBarItem.css({
+		"width" : navBarItem.outerWidth(),
+		"text-align" : "center"
+	});
+	link.addClass("fa");
+	link.html(icon);
 }
 
 // Sets nav bar item back to original text
-function navBarItemMouseOut(element, navBarItemText) {
-	var element = $(element).find("a");
-	element.removeClass("fa");
-	element.html(navBarItemText);
+function navBarItemMouseOut(navBarItem, navBarItemText) {
+	var navBarItem = $(navBarItem);
+	var link = $(navBarItem).find("a");
+	navBarItem.css({
+		"width" : "",
+		"text-align": ""
+	});
+	if (inMobileMode()) {
+		return;
+	}
+	link.removeClass("fa");
+	link.html(navBarItemText);
 }
 
 // Gets necessary data about art image when thumbnail is clicked 
@@ -171,10 +193,10 @@ function scrollSpy(sectionClass, navItem) {
 // If in mobile mode, collapse nav
 function smoothScrollTo(scrollTop) {
 	// if in mobile mode
-	if ($('#navbar').hasClass('in')) {
+	if (inMobileMode()) {
 		$('button.navbar-toggle').click();
 	}
-	
+
 	$('html,body').animate({
       scrollTop: scrollTop
     }, 1000);

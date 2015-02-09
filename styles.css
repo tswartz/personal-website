@@ -21,7 +21,6 @@ body {
 
 .nav-bar-item > a:hover {
 	color: black !important;
-	text-align: center;
 	cursor: pointer;
 }
 
