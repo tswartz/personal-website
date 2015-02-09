@@ -5,6 +5,7 @@
 	max-width: 480px;
 	max-height: 480px;
 	margin: 0px auto;
+	position: relative;
 }
 
 .thumbnail img {
@@ -46,36 +47,5 @@
 
 .thumbnail-overlay:hover p{
 	padding: 49% 0px 0px 0px;
-	opacity: 1;
-}
-
-/* VEX ******************************/
-
-.vex-overlay {
-	height: 2000px;
-	width: 100%;
-}
-
-.zoomable-text {
-	font-size: 0.7em;
-	color: #FA3200;
-}
-
-.vex-content-image-container {
-	margin-top: 25px; 
-	text-align: center;
-}
-
-.vex-content-image-container img {
-	max-width:100%
-}
-
-.vex-content-image-container .zoomed-img {
-	opacity: 0;
-	-webkit-transition: opacity 0.75s;  /* For Safari 3.1 to 6.0 */
-	transition: opacity 0.75s;
-}
-
-.vex-content-image-container .zoomed-img:hover {
 	opacity: 1;
 }

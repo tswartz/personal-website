@@ -10,7 +10,7 @@ function openVexPopup(attrs, vexImage, overlayText) {
 				return;
 			}
 			var myImage = new Image();
-			myImage.src = 'art/' + attrs['pic-src'];
+			myImage.src = 'art/' + attrs['picsrc'];
 
 			myImage.onload = function getWidthAndHeight() {
 			   	setArtZoom(attrs, this.width, this.height);
@@ -34,7 +34,7 @@ function setArtZoom(attrs, width, height) {
 	img.mouseenter(function (e) {
 		var x = (e.offsetX * widthRatio) - imgWidth;
 		var y = (e.offsetY * heightRatio) - imgHeight;
-		var background = 'url("art/' + attrs['pic-src'] + '")';
+		var background = 'url("art/' + attrs['picsrc'] + '")';
 		var zoomedImg = $('<img class="zoomed-img"/>');					
 		zoomedImg.css({
 			'position': 'absolute',
