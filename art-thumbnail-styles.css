@@ -1,0 +1,81 @@
+/* ART THUMBNAILS ******************************/
+
+.thumbnail {
+	padding: 0px;
+	max-width: 480px;
+	max-height: 480px;
+	margin: 0px auto;
+}
+
+.thumbnail img {
+	padding: 0px;
+}
+
+.thumbnail-overlay {
+	position: absolute;
+	width: 100%;
+	max-width: 480px;
+	height: 100%;
+	opacity: 0;
+	-webkit-transition: opacity 1s;  /* For Safari 3.1 to 6.0 */
+	transition: opacity 1s;
+	cursor: pointer;
+
+	background: -webkit-linear-gradient(white, cyan); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient(white, cyan); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient(white, cyan); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient(white, cyan); /* Standard syntax */
+}
+
+.thumbnail-overlay p {
+	text-align: center;
+	padding: 80% 0px 0px 0px;
+	-webkit-transition: padding 1s;  /* For Safari 3.1 to 6.0 */
+	transition: padding 1s;
+	color: black;
+}
+
+.thumbnail:hover {
+	border: none;
+}
+
+
+.thumbnail-overlay:hover {
+	opacity: 0.65;
+}
+
+.thumbnail-overlay:hover p{
+	padding: 49% 0px 0px 0px;
+	opacity: 1;
+}
+
+/* VEX ******************************/
+
+.vex-overlay {
+	height: 2000px;
+	width: 100%;
+}
+
+.zoomable-text {
+	font-size: 0.7em;
+	color: #FA3200;
+}
+
+.vex-content-image-container {
+	margin-top: 25px; 
+	text-align: center;
+}
+
+.vex-content-image-container img {
+	max-width:100%
+}
+
+.vex-content-image-container .zoomed-img {
+	opacity: 0;
+	-webkit-transition: opacity 0.75s;  /* For Safari 3.1 to 6.0 */
+	transition: opacity 0.75s;
+}
+
+.vex-content-image-container .zoomed-img:hover {
+	opacity: 1;
+}
