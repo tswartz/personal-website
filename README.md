@@ -1,4 +1,4 @@
 personal-website
 ================
 
-This is my personal [website.](www.taliaswartz.com)
+This is my personal [website.](http://www.taliaswartz.com)
