@@ -1,10 +1,9 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
-<polymer-element name="art-thumbnail" class="col-xs-12 col-md-6" attributes="pictitle, src, picsrc, artmedia" on-click="{{openArtVexPopup}}" >
+<polymer-element name="art-thumbnail" class="col-xs-12 col-md-6" attributes="pictitle, src, picsrc, artmedia" on-click="{{setupVex}}" >
 
     <template>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-		<script type="text/javascript" src="art-thumbnail-script.js"></script>
 		<link href="art-thumbnail-styles.css" rel="stylesheet">
 
     	<div class="thumbnail-wrapper">
@@ -19,18 +18,48 @@
 
     <script>
         Polymer({
-        	openArtVexPopup: openArtVexPopup
+        	setupVex: setupVex
         });
 
-        function openArtVexPopup(e) {
+        function setupVex(e) {
 			var vexImage = '<img src="art/' + this['picsrc'] + '"/>';
 			var artText = '<div class="art-text">' + this['pictitle'] + ' - ' + this['artmedia'] + '</div>';
+
+			loadRawImage(this['picsrc'], function(width, height) {
+				setMaxWidth(width);
+			   	openVex(artText, vexImage);
+			});			
+		}
+
+		// loads raw image and invokes callback method when it's done
+		// callback: takes width and height as args
+		function loadRawImage(picsrc, callback) {
+			var myImage = new Image();
+			myImage.src = 'art/' + picsrc;
+			myImage.onload = function() {
+				callback(this.width, this.height);
+			};
+			myImage.onerror = function() {
+			    console.log("Image failed to load.");
+			};	
+		}
+
+		// opens the vex window with image and text
+		function openVex(artText, vexImage) {
 			vex.open({
 				showCloseButton: true,
 				content: artText + '<div class="vex-content-image-container">' + vexImage + '</div>',
 				buttons: []
 			});
 		}
+
+		// sets the max width of the vex window to the length of the raw image
+		// plus 48px of padding on each side
+		function setMaxWidth(width) {
+			var maxWitdth = (width + 96) + 'px';
+			$("<style type='text/css'> .vex-content { max-width : " + maxWitdth + " !important; } </style>").appendTo("head");
+		}
+
     </script>
 
 </polymer-element>
