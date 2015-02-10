@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8"/>
     <link rel="icon" type="image/png" href="icon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
@@ -20,129 +22,130 @@
 	<link href="styles.css" rel="stylesheet">
 	<title>Talia Swartz</title>
 </head>
-
 <body>
-	<header>
-	  	<nav class="navbar navbar-inverse nav-bar navbar-fixed-top">
-	      	<div class="container">
-		        <div class="navbar-header">
-		          	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-			            <span class="sr-only">Toggle navigation</span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-			            <span class="icon-bar"></span>
-		          	</button>
-		          	<a class="logo">
-			          	<h1 class="logo-icon">&#60;&#47;&#62;</h1>
-						<h1>Talia</h1>
-					</a>
-		        </div>
-		        <div id="navbar" class="collapse navbar-collapse">
-		          	<ul class="nav navbar-nav navbar-right">
-		          		<li class="nav-bar-item">
-							<a section="about" icon="&#xf05a;">About</a>
-						</li>
-						<li class="nav-bar-item">
-							<a section="code" icon="&#xf121;">Code</a>
-						</li>
-						<li class="nav-bar-item">
-							<a section="art" icon="&#xf1fc;">Art</a>
-						</li>
-			            <li class="nav-bar-item">
-							<a section="contact" icon="&#xf0e0;">Contact</a>
-						</li>
-		          	</ul>
-		        </div>
-	      	</div>
-	    </nav>
-	</header>
-	<main>
-		<div id="desktopTest" class="hidden-xs"></div>
-		<div class="top-banner">
-			<div class="cover-photo-container">
-				<h1 class="cover-photo-text">My name is Talia and I live in Boston.</h1>
-				<div class="darken-filter"></div>
-		   		<img class="cover-photo" src="cover3-2.jpg">
-			</div>
-		</div>
-		<div class="about-section section">
-			<div class="section-content">
-				<h3>About</h3>
-				<p class="large-paragraph">
-					I like to make things.
-				</p>
-				<div class="headshot">
-					<img src="headshot.png" />
-				</div>
-				<p> 
-					I'm a Computer Science major in my senior year at Northeastern University.
-					I'll be working as a Software Engineer at <a href="http://www.hubspot.com" target="blank">HubSpot</a> after I graduate in Spring 2015.
-					I love front-end development and bunnies. 
-					I'm also an Art + Design minor and I love to draw stuff - primarily people, kitchen things, and my shoes.
-				</p>
-			</div>
-		</div>
-		<div class="code-section section">
-			<div class="section-content">
-				<h3>Code</h3>
-				<p class="large-paragraph">
-					The front-end is where I'm at. 
-				</p>
-				<p>
-					I think my love of art and design has something to do with that. 
-					Pretty much all of my professional experience is with web applications but I have 
-					also made a few local desktop apps here and there.
-					I am loving CoffeeScript at the moment and I've also done a lot of work in 
-					Java, Python, C, SQL, HTML, CSS, Sass, Jade, Handlebars, JavaScript, Backbone.js, Flex, Spring, and ExtJS.
-					<br/><br/>
-					I participated in the <a target="blank" href="http://projects.hackbeanpot.com/2014-projects.html">2014 HackBeanpot</a> with my dear friend Rose. 
-					We created a web app called Split that lets you split (see where the name comes from??) 
-					gas money on road trips.
-					We won Best Use of APIs. Yay! 
-					<br/><br/>
-					Check it out along with other stuff I've made <a target="blank" href="https://github.com/tswartz"> on GitHub.</a>
-				</p>
-			</div>
-		</div>
-		<div class="art-section section">
-			<div class="section-content">
-				<h3>Art</h3>
-				<p class="large-paragraph">
-					Look at these things I drew! 
-				</p>
-				<div class="thumbnails">
-					<div class="row">
-						<art-thumbnail pictitle="Converse" src="converse_thumb.jpg" picsrc="converse.jpg" artmedia="Adobe Illustrator"></art-thumbnail>
-						<art-thumbnail pictitle="Peppers" src="peppers_thumb.jpg" picsrc="peppers.jpg" artmedia="Charcoal"></art-thumbnail>
-					</div>
-					<div class="row">
-						<art-thumbnail pictitle="Glass Coke Bottle and Sneaker" src="cokebottle_thumb.jpg" picsrc="cokebottle.jpg" artmedia="Charcoal"></art-thumbnail>
-						<art-thumbnail pictitle="Brooding Hat Guy" src="hatguy_thumb.jpg" picsrc="hatguy.jpg" artmedia="Chalk Pastel"></art-thumbnail>
-					</div>
-					<div class="row">
-						<art-thumbnail pictitle="Rosenbloom Religious School Logo" src="logo_thumb.jpg" picsrc="logo.jpg" artmedia="Adobe InDesign"></art-thumbnail>
-						<art-thumbnail pictitle="Cheese Graters Are Hard To Draw" src="potgrater_thumb.jpg" picsrc="potgrater.jpg" artmedia="Charcoal"></art-thumbnail>
-					</div>
-					<div class="row">
-						<art-thumbnail pictitle="Mug N' Fruit" src="mugfruit_thumb.jpg" picsrc="mugfruit.jpg" artmedia="Charcoal"></art-thumbnail>
-						<art-thumbnail pictitle="Cool Car" src="car_thumb.jpg" picsrc="car.jpg" artmedia="Adobe Illustrator"></art-thumbnail>
-					</div>
+	<div class="container">
+		<header>
+		  	<nav class="navbar navbar-inverse nav-bar navbar-fixed-top">
+		      	<div class="container">
+			        <div class="navbar-header">
+			          	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				            <span class="sr-only">Toggle navigation</span>
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+				            <span class="icon-bar"></span>
+			          	</button>
+			          	<a class="logo">
+				          	<h1 class="logo-icon">&#60;&#47;&#62;</h1>
+							<h1>Talia</h1>
+						</a>
+			        </div>
+			        <div id="navbar" class="collapse navbar-collapse">
+			          	<ul class="nav navbar-nav navbar-right">
+			          		<li class="nav-bar-item">
+								<a section="about" icon="&#xf05a;">About</a>
+							</li>
+							<li class="nav-bar-item">
+								<a section="code" icon="&#xf121;">Code</a>
+							</li>
+							<li class="nav-bar-item">
+								<a section="art" icon="&#xf1fc;">Art</a>
+							</li>
+				            <li class="nav-bar-item">
+								<a section="contact" icon="&#xf0e0;">Contact</a>
+							</li>
+			          	</ul>
+			        </div>
+		      	</div>
+		    </nav>
+		</header>
+		<main>
+			<div id="desktopTest" class="hidden-xs"></div>
+			<div class="top-banner">
+				<div class="cover-photo-container">
+					<h1 class="cover-photo-text">My name is Talia and I live in Boston.</h1>
+					<div class="darken-filter"></div>
+			   		<img class="cover-photo" src="cover3-2.jpg">
 				</div>
 			</div>
-		</div>
-		<div class="contact-section section">
-			<div class="section-content">
-				<h3>Contact</h3>
-				<div class="email-link large-paragraph">
-						<a href="mailto:tswartz92@gmail.com">tswartz92@gmail.com</a>
-				</div>
-				<div class="contact-logo-container">
-					<a class="contact-logo fa fa-linkedin-square" id="linkedin-logo" target="_blank" href="https://www.linkedin.com/profile/view?id=268002550&trk=nav_responsive_tab_profile"></a>
-					<a class="contact-logo fa fa-github" id="github-logo" target="_blank" href="https://github.com/tswartz"></a>
-					<a class="contact-logo fa fa-twitter" id="twitter-logo" target="_blank" href="https://twitter.com/taliamollie"></a>
+			<div class="about-section section">
+				<div class="section-content">
+					<h3>About</h3>
+					<p class="large-paragraph">
+						I like to make things.
+					</p>
+					<div class="headshot">
+						<img src="headshot.png" />
+					</div>
+					<p> 
+						I'm a Computer Science major in my senior year at Northeastern University.
+						I'll be working as a Software Engineer at <a href="http://www.hubspot.com" target="blank">HubSpot</a> after I graduate in Spring 2015.
+						I love front-end development and bunnies. 
+						I'm also an Art + Design minor and I love to draw stuff - primarily people, kitchen things, and my shoes.
+					</p>
 				</div>
 			</div>
-		</div>
-	</main>
+			<div class="code-section section">
+				<div class="section-content">
+					<h3>Code</h3>
+					<p class="large-paragraph">
+						The front-end is where I'm at. 
+					</p>
+					<p>
+						I think my love of art and design has something to do with that. 
+						Pretty much all of my professional experience is with web applications but I have 
+						also made a few local desktop apps here and there.
+						I am loving CoffeeScript at the moment and I've also done a lot of work in 
+						Java, Python, C, SQL, HTML, CSS, Sass, Jade, Handlebars, JavaScript, Backbone.js, Flex, Spring, and ExtJS.
+						<br/><br/>
+						I participated in the <a target="blank" href="http://projects.hackbeanpot.com/2014-projects.html">2014 HackBeanpot</a> with my dear friend Rose. 
+						We created a web app called Split that lets you split (see where the name comes from??) 
+						gas money on road trips.
+						We won Best Use of APIs. Yay! 
+						<br/><br/>
+						Check it out along with other stuff I've made <a target="blank" href="https://github.com/tswartz"> on GitHub.</a>
+					</p>
+				</div>
+			</div>
+			<div class="art-section section">
+				<div class="section-content">
+					<h3>Art</h3>
+					<p class="large-paragraph">
+						Look at these things I drew! 
+					</p>
+					<div class="thumbnails">
+						<div class="row">
+							<art-thumbnail pictitle="Converse" src="converse_thumb.jpg" picsrc="converse.jpg" artmedia="Adobe Illustrator"></art-thumbnail>
+							<art-thumbnail pictitle="Peppers" src="peppers_thumb.jpg" picsrc="peppers.jpg" artmedia="Charcoal"></art-thumbnail>
+						</div>
+						<div class="row">
+							<art-thumbnail pictitle="Glass Coke Bottle and Sneaker" src="cokebottle_thumb.jpg" picsrc="cokebottle.jpg" artmedia="Charcoal"></art-thumbnail>
+							<art-thumbnail pictitle="Brooding Hat Guy" src="hatguy_thumb.jpg" picsrc="hatguy.jpg" artmedia="Chalk Pastel"></art-thumbnail>
+						</div>
+						<div class="row">
+							<art-thumbnail pictitle="Rosenbloom Religious School Logo" src="logo_thumb.jpg" picsrc="logo.jpg" artmedia="Adobe InDesign"></art-thumbnail>
+							<art-thumbnail pictitle="Cheese Graters Are Hard To Draw" src="potgrater_thumb.jpg" picsrc="potgrater.jpg" artmedia="Charcoal"></art-thumbnail>
+						</div>
+						<div class="row">
+							<art-thumbnail pictitle="Mug N' Fruit" src="mugfruit_thumb.jpg" picsrc="mugfruit.jpg" artmedia="Charcoal"></art-thumbnail>
+							<art-thumbnail pictitle="Cool Car" src="car_thumb.jpg" picsrc="car.jpg" artmedia="Adobe Illustrator"></art-thumbnail>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="contact-section section">
+				<div class="section-content">
+					<h3>Contact</h3>
+					<div class="email-link large-paragraph">
+							<a href="mailto:tswartz92@gmail.com">tswartz92@gmail.com</a>
+					</div>
+					<div class="contact-logo-container">
+						<a class="contact-logo fa fa-linkedin-square" id="linkedin-logo" target="_blank" href="https://www.linkedin.com/profile/view?id=268002550&trk=nav_responsive_tab_profile"></a>
+						<a class="contact-logo fa fa-github" id="github-logo" target="_blank" href="https://github.com/tswartz"></a>
+						<a class="contact-logo fa fa-twitter" id="twitter-logo" target="_blank" href="https://twitter.com/taliamollie"></a>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
 </body>
 </html>
