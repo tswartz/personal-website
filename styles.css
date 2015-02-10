@@ -220,6 +220,8 @@ a.contact-logo {
 
 .row {
 	padding: 0px;
+	max-width: 970px;
+	margin: 0px auto;
 }
 
 .row > * {
