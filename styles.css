@@ -233,9 +233,8 @@ a.contact-logo {
 	width: 100%;
 }
 
-.zoomable-text {
-	font-size: 0.7em;
-	color: #FA3200;
+.vex-content {
+	width: 75% !important;
 }
 
 .vex-content-image-container {
@@ -246,14 +245,3 @@ a.contact-logo {
 .vex-content-image-container img {
 	max-width:100%
 }
-
-.vex-content-image-container .zoomed-img {
-	opacity: 0;
-	-webkit-transition: opacity 0.75s;  /* For Safari 3.1 to 6.0 */
-	transition: opacity 0.75s;
-}
-
-.vex-content-image-container .zoomed-img:hover {
-	opacity: 1;
-}
-

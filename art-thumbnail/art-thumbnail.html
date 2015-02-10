@@ -1,6 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
-<polymer-element name="art-thumbnail" class="col-xs-12 col-md-6" attributes="pictitle, src, picsrc, artmedia, zoomable" on-click="{{setArtVexPopup}}" >
+<polymer-element name="art-thumbnail" class="col-xs-12 col-md-6" attributes="pictitle, src, picsrc, artmedia" on-click="{{openArtVexPopup}}" >
 
     <template>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -12,25 +12,25 @@
 			    <div class="thumbnail-overlay">
 	    			<p>{{pictitle}}</p>
 	    		</div>
-		      	<img src="art/{{src}}" class="zoomable" picsrc="art/{{picsrc}}" artmedia="Charcoal">
+		      	<img src="art/{{src}}" picsrc="art/{{picsrc}}" artmedia="Charcoal">
 		    </a>
 	  	</div>
     </template>
 
     <script>
         Polymer({
-        	setArtVexPopup: setArtVexPopup
+        	openArtVexPopup: openArtVexPopup
         });
 
-        function setArtVexPopup(e) {
+        function openArtVexPopup(e) {
 			var vexImage = '<img src="art/' + this['picsrc'] + '"/>';
-			var overlayText = '<div>' + this['pictitle'] + ' - ' + this['artmedia'] + '</div>';
-			if (this['zoomable']) {
-				overlayText +=  '<div class="zoomable-text">Hover over image to zoom</div>';
-			}
-			openVexPopup(this, vexImage, overlayText);
+			var artText = '<div class="art-text">' + this['pictitle'] + ' - ' + this['artmedia'] + '</div>';
+			vex.open({
+				showCloseButton: true,
+				content: artText + '<div class="vex-content-image-container">' + vexImage + '</div>',
+				buttons: []
+			});
 		}
-
     </script>
 
 </polymer-element>
