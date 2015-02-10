@@ -97,6 +97,8 @@ body {
 	font-weight: 100;
 	opacity: 0;
 	transform: translateY(-50%);
+	-ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
 	padding: 0px 20px;
     
     -moz-transition: opacity 2.5s;
