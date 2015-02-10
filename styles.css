@@ -96,6 +96,8 @@ body {
 	text-align: center;
 	font-weight: 100;
 	opacity: 0;
+	transform: translateY(-50%);
+	padding: 0px 20px;
     
     -moz-transition: opacity 2.5s;
     -webkit-transition: opacity 2.5s;
@@ -246,4 +248,24 @@ a.contact-logo {
 
 .vex-content-image-container img {
 	max-width:100%
+}
+
+/* MOBILE FIXES ****************************/
+
+@media (max-width: 768px) {
+	.cover-photo-text {
+		font-size: 28px
+	}
+
+	.darken-filter {
+		opacity: 0.45;
+	}
+
+	.email-link {
+		font-size: 140% !important;
+	}
+
+	a.contact-logo {
+		margin: 0px 13px !important;
+	}
 }
