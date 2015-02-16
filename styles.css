@@ -270,4 +270,17 @@ a.contact-logo {
 	a.contact-logo {
 		margin: 0px 13px !important;
 	}
+
+	.section-content h3 {
+		padding-top: 35px;
+	}
+
+	.section-content .large-paragraph {
+		padding-bottom: 15px;
+	}
+
+	.section-content * {
+		padding-top: 10px;
+		padding-bottom: 15px;
+	}
 }
