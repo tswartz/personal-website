@@ -1,0 +1,7 @@
+{
+  "name": "Talia Swartz",
+  "description": "My personal website",
+  "repository": "https://github.com/tswartz/personal-website",
+  "logo": "icon.pngweb: node index.js",
+  "keywords": ["node", "express", "static"]
+}

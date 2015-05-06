@@ -8,6 +8,16 @@ body {
 
 /* NAVIGATION BAR ******************************/
 
+nav {
+	top: 70px;
+	-webkit-transition: top 1s;  /* For Safari 3.1 to 6.0 */
+	transition: top 1s;
+}
+
+nav.show-nav-bar {
+	top:0px;
+}
+
 .nav-bar {
     background: white;
     border: none;
