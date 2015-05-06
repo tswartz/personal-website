@@ -7,9 +7,20 @@ app.controller('HomeController', function($scope, $http, $location, $sce)
 		$('.nav-icon-container').toggleClass('show-nav-bar');
 	}
 
-	// $('body').scroll(function(e){
-	// 	console.log(e);
-	// });
+    $scope.scrollToTop = function () {
+        $('html,body').animate({
+          scrollTop: 0
+        }, 1000);
+    }
+
+	$(window).scroll( function () {
+        var currentScrollHeight = $('body').scrollTop();
+		if (currentScrollHeight >= 50) {
+            $('.scroll-to-top').addClass('show-scroll-to-top');
+        } else {
+            $('.scroll-to-top').removeClass('show-scroll-to-top');
+        }
+	});
 });
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {

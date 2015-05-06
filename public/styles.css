@@ -143,6 +143,26 @@ body {
 	background-color: #6E6E6E;
 }
 
+.scroll-to-top {
+	font-size: 40px;
+	color: #9d9d9d;
+	position: fixed;
+	right: 0;
+	margin: 10px;
+	cursor: pointer;
+	z-index: 3;
+	opacity: 0;
+
+	-moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+   	transition: opacity 1s;
+}
+
+.scroll-to-top.show-scroll-to-top {
+	opacity: 1;
+}
+
 /* CONTENT BELOW NAV BAR ******************************/
 
 .cover-photo {
