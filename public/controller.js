@@ -8,7 +8,8 @@ app.controller('HomeController', function($scope, $http, $location, $sce)
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.
     when('/home', {
-        templateUrl: 'pages/home.html'
+        templateUrl: 'pages/home.html',
+        controller: 'HomeCtrl'
     }).
     when('/about', {
         templateUrl: 'pages/about.html'

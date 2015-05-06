@@ -9,13 +9,13 @@ body {
 
 /* NAVIGATION BAR ******************************/
 
-nav {
-	top: 70px;
+.nav-bar {
+	top: -70px;
 	-webkit-transition: top 1s;  /* For Safari 3.1 to 6.0 */
 	transition: top 1s;
 }
 
-nav.show-nav-bar {
+.nav-bar.show-nav-bar {
 	top:0px;
 }
 
@@ -95,6 +95,12 @@ nav.show-nav-bar {
 
 .cover-photo {
 	width: 100%;
+	background-image: url(cover3-2.jpg);
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-size: cover;
 }
 
 .cover-photo-container { 
@@ -103,14 +109,15 @@ nav.show-nav-bar {
 }
 
 .cover-photo-text {
-	z-index: 1;
-	position: absolute;
+	z-index: 2;
+	position: fixed;
 	width: 100%;
 	top: 45%;
 	color: white;
 	text-align: center;
 	font-weight: 100;
 	opacity: 0;
+	text-shadow: 3px 2px 6px rgba(0,0,0,0.5);
 	transform: translateY(-50%);
 	-ms-transform: translateY(-50%); /* IE 9 */
     -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
@@ -127,19 +134,16 @@ nav.show-nav-bar {
 }
 
 .darken-filter {
-	z-index: 0;
+	z-index: 1;
 	background: black;
 	opacity: 0.55;
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 100%;
 }
 
 main {
 	color: black;
-	position: absolute;
-	width: 100%;
-	top: 70px;
 }
 
 /* SECTIONS ******************************/
