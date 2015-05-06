@@ -2,20 +2,10 @@ $(document).ready(function() {
 	// add loaded class to cover photo text so it can fade in
 	$('.cover-photo-text').addClass("loaded");
 
-	// set smooth scroll for each item in nav bar
-	$('.nav-bar-item').click(function (e) {
-		var sectionClass = $(e.target).attr('section') + "-section";
-        smoothScrollTo(getYPosition(sectionClass));
-	});
 
 	// set icon hover effect for each nav bar item
 	$('.nav-bar-item').each(function(index, navBarItem){
 		setIconHoverEffect(index, navBarItem);
-	});
-
-	// if you click on logo, smooth scroll to top
-	$('.logo').click(function (e) {
-		smoothScrollTo(0);
 	});
 
 });

@@ -4,6 +4,7 @@ body {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     margin: 0px;
+    background: #F3F3F3;
 }
 
 /* NAVIGATION BAR ******************************/
@@ -32,6 +33,10 @@ nav.show-nav-bar {
 .nav-bar-item > a:hover {
 	color: black !important;
 	cursor: pointer;
+}
+
+.navbar-nav>li>a:focus {
+	color: #9d9d9d !important;
 }
 
 .selected {
@@ -130,10 +135,6 @@ nav.show-nav-bar {
 	height: 100%;
 }
 
-.section {
-	background: #F3F3F3;
-}
-
 main {
 	color: black;
 	position: absolute;
@@ -150,7 +151,6 @@ main {
 .section-content {
 	margin: 0px auto;
 	width: 75%;
-	border-bottom: 1px rgb(214, 214, 214) solid;
 }
 
 .section-content h3 {

@@ -2,6 +2,6 @@
   "name": "Talia Swartz",
   "description": "My personal website",
   "repository": "https://github.com/tswartz/personal-website",
-  "logo": "icon.pngweb: node index.js",
+  "logo": "icon.png",
   "keywords": ["node", "express", "static"]
 }
