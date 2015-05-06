@@ -13,14 +13,6 @@ app.controller('HomeController', function($scope, $http, $location, $sce)
         }, 1000);
     }
 
-	$(window).scroll( function () {
-        var currentScrollHeight = $('body').scrollTop();
-		if (currentScrollHeight >= 50) {
-            $('.scroll-to-top').addClass('show-scroll-to-top');
-        } else {
-            $('.scroll-to-top').removeClass('show-scroll-to-top');
-        }
-	});
 });
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {

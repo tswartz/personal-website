@@ -1,11 +1,12 @@
 $(document).ready(function() {
-	// add loaded class to cover photo text so it can fade in
-	$('.cover-photo-text').addClass("loaded");
-
 
 	// set icon hover effect for each nav bar item
 	$('.nav-bar-item').each(function(index, navBarItem){
 		setIconHoverEffect(index, navBarItem);
+	});
+
+	$(window).scroll( function () {
+        toggleScrollToTopIcon();
 	});
 
 });
@@ -55,51 +56,11 @@ function navBarItemMouseOut(navBarItem, navBarItemText) {
 	link.html(navBarItemText);
 }
 
-// gets the y position of a section
-function getYPosition(sectionClass) {
-    if ($('.' + sectionClass).length == 0) {
-    	return 0;
+function toggleScrollToTopIcon () {
+	var currentScrollHeight = $('body').scrollTop();
+	if (currentScrollHeight >= 50) {
+        $('.scroll-to-top').addClass('show-scroll-to-top');
+    } else {
+        $('.scroll-to-top').removeClass('show-scroll-to-top');
     }
-    var yPosition = 0;
-    var sections = $('main').children();
-    for (var i = 0; i < sections.length; i++) {
-    	var currentSection = $(sections.get(i));
-    	if (currentSection.hasClass(sectionClass)) {
-    		return yPosition;
-    	} else {
-    		yPosition += currentSection.outerHeight();
-    	}
-    }
-}
-
-// Highlights nav bar item when viewing corresponding section
-function scrollSpy(sectionClass, navItem) {
-	var section = $('.' + sectionClass);
-	var position = section.position();
-	console.log(section, position);
-	section.scrollspy({
-		min: position.top,
-    	max: position.top + section.outerHeight(),
-	    onEnter: function(element, position) {
-	        navItem.addClass('selected');
-	    },
-	    onLeave: function(element, position) {
-	        navItem.removeClass('selected');
-	    }
-	});
-}
-
-// Scrolls to given y-position (scrollTop)
-// If in mobile mode, collapse nav
-function smoothScrollTo(scrollTop) {
-	// if in mobile mode and not clicking on logo
-	if (inMobileMode() && scrollTop!=0) {
-		$('button.navbar-toggle').click();
-	}
-
-	console.log(scrollTop);
-
-	$('html,body').animate({
-      scrollTop: scrollTop
-    }, 1000);
 }
