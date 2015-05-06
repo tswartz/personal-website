@@ -9,8 +9,31 @@ body {
 
 /* NAVIGATION BAR ******************************/
 
+.nav-icon-container {
+	text-align: center;
+	padding: 10px;
+	font-size: 30px;
+	color: #9d9d9d;
+	margin-top: 0px;
+
+	-moz-transition: margin-top 1s;
+    -webkit-transition: margin-top 1s;
+    -o-transition: margin-top 1s;
+   	transition: margin-top 1s;
+}
+
+.nav-icon-container.show-nav-bar {
+	margin-top: 70px;
+}
+
+.nav-icon-container .fa-bars {
+	cursor: pointer;
+}
+
 .nav-bar {
+	text-align: center;
 	top: -70px;
+
 	-webkit-transition: top 1s;  /* For Safari 3.1 to 6.0 */
 	transition: top 1s;
 }
@@ -30,9 +53,20 @@ body {
 	font-size: 0.9em;
 }
 
+.nav-bar-item, .nav-bar-item a {
+	display: inline !important;
+}
+
+
 .nav-bar-item > a:hover {
 	color: black !important;
 	cursor: pointer;
+}
+
+.navbar-nav {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
 }
 
 .navbar-nav>li>a:focus {
@@ -54,19 +88,37 @@ body {
 
 .logo {
 	color: #07B4D3;
-
-	-webkit-transition: color 0.75s;  /* For Safari 3.1 to 6.0 */
-	transition: color 0.75s;
+	text-align: center;
+	top: 45%;
+	position: absolute;
+	width: 100%;
 }
 
-.logo:hover {
-	color: #098399;
-	text-decoration: none;
-}
 
-.logo-icon{
+.logo-icon {
 	font-size: 2em;
 	font-weight: 100;
+	left: -100%;
+  	position: relative;
+
+  	-webkit-transition: left 0.75s;  /* For Safari 3.1 to 6.0 */
+	transition: left 0.75s;
+}
+
+.logo-text {
+	position: relative;
+	right: -100%;
+
+	-webkit-transition: right 0.75s;  /* For Safari 3.1 to 6.0 */
+	transition: right 0.75s;
+}
+
+.logo-icon.loaded {
+	left: 0px;
+}
+
+.logo-text.loaded {
+	right: 0px;
 }
 
 .navbar-inverse .navbar-collapse {
@@ -129,7 +181,7 @@ body {
    	transition: opacity 2.5s;
 }
 
-.cover-photo-text.loaded {
+.loaded {
 	opacity: 1;
 }
 
@@ -269,12 +321,9 @@ a.contact-logo {
 /* MOBILE FIXES ****************************/
 
 @media (max-width: 768px) {
-	.cover-photo-text {
-		font-size: 28px
-	}
 
-	.darken-filter {
-		opacity: 0.45;
+	.navbar-nav {
+		font-size: 12px;
 	}
 
 	.email-link {

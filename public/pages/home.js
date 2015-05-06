@@ -1,10 +1,11 @@
 app.controller('HomeCtrl', function($scope, $http, $location)
 {
     $(document).ready(function() {
-        console.log("heyyyyy boiiiiiiii");
         // add loaded class to cover photo text so it can fade in
-        $('.cover-photo-text').addClass("loaded");
-        console.log("added loaded", $('.cover-photo-text'));
+        setTimeout( function () {
+            $('.logo *').addClass('loaded');
+        }, 1000);
+        
 
 
         // set icon hover effect for each nav bar item

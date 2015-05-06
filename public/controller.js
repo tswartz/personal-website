@@ -2,7 +2,14 @@ var app = angular.module("TaliaApp", ["ngRoute"]);
 
 app.controller('HomeController', function($scope, $http, $location, $sce)
 {
+	$scope.toggleNavbar = function () {
+		$('.nav-bar').toggleClass('show-nav-bar');
+		$('.nav-icon-container').toggleClass('show-nav-bar');
+	}
 
+	// $('body').scroll(function(e){
+	// 	console.log(e);
+	// });
 });
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {

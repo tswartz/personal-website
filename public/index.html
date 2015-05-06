@@ -31,22 +31,16 @@
 	<body ng-app="TaliaApp">
 		<div ng-controller="HomeController">
 			<header>
+				<div class="nav-icon-container">
+					<span class="fa fa-bars" ng-click="toggleNavbar()"/>
+				</div>
 			  	<nav class="navbar navbar-inverse nav-bar navbar-fixed-top">
 			      	<div class="container">
-				        <div class="navbar-header">
-				          	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					            <span class="sr-only">Toggle navigation</span>
-					            <span class="icon-bar"></span>
-					            <span class="icon-bar"></span>
-					            <span class="icon-bar"></span>
-				          	</button>
-				          	<a class="logo" href="/home">
-					          	<h1 class="logo-icon">&#60;&#47;&#62;</h1>
-								<h1>Talia</h1>
-							</a>
-				        </div>
-				        <div id="navbar" class="collapse navbar-collapse">
-				          	<ul class="nav navbar-nav navbar-right">
+				        <div id="navbar">
+				          	<ul class="nav navbar-nav" ng-click="toggleNavbar()">
+				          		<li class="nav-bar-item">
+									<a href="/home" icon="&#xf015;">Home</a>
+								</li>
 				          		<li class="nav-bar-item">
 									<a href="/about" icon="&#xf05a;">About</a>
 								</li>
