@@ -77,9 +77,10 @@ body {
 	color: black;
 }
 
+/* Homepage logo and text */
+
 .logo * {
 	display: inline;
-	cursor: pointer;
 	text-transform: uppercase;
 	font-size: 2.8em;
     text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
@@ -98,27 +99,54 @@ body {
 .logo-icon {
 	font-size: 2em;
 	font-weight: 100;
-	left: -100%;
-  	position: relative;
-
-  	-webkit-transition: left 0.75s;  /* For Safari 3.1 to 6.0 */
-	transition: left 0.75s;
 }
 
-.logo-text {
-	position: relative;
-	right: -100%;
+.left-chevron {
+	margin-right: -15px;
 
-	-webkit-transition: right 0.75s;  /* For Safari 3.1 to 6.0 */
-	transition: right 0.75s;
+	-moz-transition: margin-right 0.5s;
+    -webkit-transition: margin-right 0.5s;
+    -o-transition: margin-right 0.5s;
+   	transition: margin-right 0.5s;
 }
 
-.logo-icon.loaded {
-	left: 0px;
+.right-chevron {
+	margin-left: -15px;
+
+	-moz-transition: margin-left 0.5s;
+    -webkit-transition: margin-left 0.5s;
+    -o-transition: margin-left 0.5s;
+   	transition: margin-left 0.5s;
 }
 
-.logo-text.loaded {
-	right: 0px;
+.slash {
+	opacity: 0;
+
+	-moz-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+   	transition: opacity 0.5s;	
+}
+
+.left-chevron.loaded {
+	margin-right: -5px;
+}
+
+.right-chevron.loaded {
+	margin-left: -5px;
+}
+
+.slash.loaded {
+	opacity: 1;
+}
+
+.logo-subtext {
+	color: gainsboro;
+	font-size: 1.5em;
+	display: block;
+	margin-top: 0px;
+	text-transform: lowercase;
+	padding: 0px 15px;
 }
 
 .navbar-inverse .navbar-collapse {
