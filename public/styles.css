@@ -82,7 +82,6 @@ body {
 .logo * {
 	display: inline;
 	text-transform: uppercase;
-	font-size: 2.8em;
     text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
     font-weight: bold;
 }
@@ -140,13 +139,45 @@ body {
 	opacity: 1;
 }
 
+.logo-text {
+	font-size: 2.8em;
+}
+
 .logo-subtext {
-	color: gainsboro;
-	font-size: 1.5em;
+	color: #CBCBCB;
 	display: block;
 	margin-top: 0px;
 	text-transform: lowercase;
 	padding: 0px 15px;
+}
+
+.first-subtext, .second-subtext, .third-subtext{
+	opacity: 0;
+}
+
+.first-subtext {
+	-moz-transition: opacity 1.5s;
+    -webkit-transition: opacity 1.5s;
+    -o-transition: opacity 1.5s;
+   	transition: opacity 1.5s;
+}
+
+.second-subtext {
+	-moz-transition: opacity 2.5s;
+    -webkit-transition: opacity 2.5s;
+    -o-transition: opacity 2.5s;
+   	transition: opacity 2.5s;
+}
+
+.third-subtext {
+	-moz-transition: opacity 3.5s;
+    -webkit-transition: opacity 3.5s;
+    -o-transition: opacity 3.5s;
+   	transition: opacity 3.5s;
+}
+
+.first-subtext.loaded, .second-subtext.loaded, .third-subtext.loaded {
+	opacity: 1;
 }
 
 .navbar-inverse .navbar-collapse {
