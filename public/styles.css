@@ -147,8 +147,11 @@ body {
 	color: #CBCBCB;
 	display: block;
 	margin-top: 0px;
-	text-transform: lowercase;
 	padding: 0px 15px;
+}
+
+.logo-subtext * {
+	text-transform: lowercase;
 }
 
 .first-subtext, .second-subtext, .third-subtext{
